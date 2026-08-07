@@ -4,24 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ValidLeads | B2B Lead Generation & Sales Navigator Services</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg-main: #090d16;
+            --card-bg: rgba(17, 24, 39, 0.65);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --accent-blue: #38bdf8;
+            --accent-purple: #818cf8;
+            --accent-green: #10b981;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         body {
-            background: #0f172a;
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(14, 165, 233, 0.15) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(37, 211, 102, 0.1) 0px, transparent 50%);
-            background-attachment: fixed;
-            color: #f8fafc;
+            background-color: var(--bg-main);
+            color: var(--text-primary);
             min-height: 100vh;
-            padding: 40px 20px;
+            padding: 60px 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Modern Mesh Glow Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -10%;
+            left: 20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, rgba(0,0,0,0) 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            bottom: -10%;
+            right: 15%;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(129, 140, 248, 0.1) 0%, rgba(0,0,0,0) 70%);
+            z-index: -1;
+            pointer-events: none;
         }
 
         .container {
@@ -29,248 +65,279 @@
             margin: 0 auto;
         }
 
+        /* Hero Header */
         header {
             text-align: center;
-            padding: 50px 20px;
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 20px;
-            margin-bottom: 40px;
-            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+            padding: 40px 20px 60px;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .brand-title {
-            font-size: 1.1rem;
+        .brand-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(56, 189, 248, 0.08);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-radius: 100px;
+            font-size: 0.85rem;
             font-weight: 700;
-            letter-spacing: 2px;
-            color: #38bdf8;
+            color: var(--accent-blue);
+            letter-spacing: 1px;
             text-transform: uppercase;
-            margin-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        .brand-badge span {
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-blue);
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 10px var(--accent-blue);
         }
 
         header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.15;
+            background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 12px;
-            letter-spacing: -0.5px;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
         }
 
         header p {
             font-size: 1.15rem;
-            color: #94a3b8;
-            max-width: 650px;
-            margin: 0 auto;
+            color: var(--text-secondary);
+            line-height: 1.6;
             font-weight: 400;
         }
 
+        /* Grid & Cards */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-            margin-bottom: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
         }
 
         .card {
-            background: rgba(30, 41, 59, 0.6);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 16px;
-            padding: 30px;
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 32px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             position: relative;
-            overflow: hidden;
         }
 
         .card:hover {
-            transform: translateY(-6px);
+            transform: translateY(-5px);
             border-color: rgba(56, 189, 248, 0.3);
-            box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5), 0 0 20px 0 rgba(56, 189, 248, 0.1);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), 0 0 30px rgba(56, 189, 248, 0.08);
         }
 
-        .card-header {
-            margin-bottom: 20px;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 4px 10px;
-            background: rgba(56, 189, 248, 0.1);
-            color: #38bdf8;
-            border-radius: 20px;
+        .card-tag {
+            align-self: flex-start;
+            padding: 4px 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-secondary);
+            border-radius: 8px;
             font-size: 0.75rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-bottom: 12px;
-            border: 1px solid rgba(56, 189, 248, 0.2);
+            margin-bottom: 16px;
         }
 
         .card h3 {
-            color: #f8fafc;
+            color: var(--text-primary);
             font-size: 1.35rem;
-            font-weight: 600;
+            font-weight: 700;
             line-height: 1.3;
+            margin-bottom: 20px;
         }
 
         .card ul {
             list-style: none;
-            margin-bottom: 25px;
+            margin-bottom: 28px;
         }
 
         .card ul li {
             margin-bottom: 12px;
-            color: #cbd5e1;
+            color: var(--text-secondary);
             font-size: 0.95rem;
             display: flex;
-            align-items: flex-start;
-            gap: 10px;
+            align-items: center;
+            gap: 12px;
         }
 
-        .card ul li::before {
-            content: "✓";
-            color: #22c55e;
-            font-weight: bold;
-            font-size: 1rem;
+        .card ul li svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: var(--accent-green);
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            flex-shrink: 0;
         }
 
         .price-container {
             display: flex;
             align-items: baseline;
-            gap: 6px;
+            gap: 8px;
             margin-bottom: 20px;
-            padding-top: 15px;
+            padding-top: 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.06);
         }
 
         .price {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: #f8fafc;
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -1px;
         }
 
         .price-label {
             color: #64748b;
             font-size: 0.85rem;
+            font-weight: 600;
             text-transform: uppercase;
-            font-weight: 500;
         }
 
         .btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            background: #25D366;
+            gap: 10px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
             color: #ffffff;
             text-decoration: none;
             padding: 14px 20px;
-            border-radius: 10px;
-            font-weight: 600;
-            font-size: 1rem;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.95rem;
             transition: all 0.2s ease;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
         }
 
         .btn:hover {
-            background: #20bd5a;
-            box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
+            opacity: 0.95;
             transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
         }
 
         /* Contact Section */
         .contact-section {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 20px;
-            padding: 40px;
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 50px 30px;
             text-align: center;
-            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .contact-section h2 {
-            font-size: 1.8rem;
-            color: #f8fafc;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-primary);
             margin-bottom: 10px;
+            letter-spacing: -0.5px;
         }
 
         .contact-section p {
-            color: #94a3b8;
-            margin-bottom: 25px;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
             font-size: 1rem;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 16px;
             flex-wrap: wrap;
         }
 
         .social-btn {
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 10px;
             padding: 12px 24px;
-            border-radius: 10px;
+            border-radius: 12px;
             text-decoration: none;
             font-weight: 600;
             font-size: 0.95rem;
             transition: all 0.2s ease;
             color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .social-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
         }
 
         .social-btn.linkedin {
-            background: #0a66c2;
-            box-shadow: 0 4px 12px rgba(10, 102, 194, 0.25);
+            background: rgba(10, 102, 194, 0.15);
+            color: #38bdf8;
+            border-color: rgba(56, 189, 248, 0.3);
         }
 
         .social-btn.linkedin:hover {
-            background: #084e96;
+            background: #0a66c2;
+            color: #ffffff;
             transform: translateY(-2px);
         }
 
         .social-btn.facebook {
-            background: #1877f2;
-            box-shadow: 0 4px 12px rgba(24, 119, 242, 0.25);
+            background: rgba(24, 119, 242, 0.15);
+            color: #60a5fa;
+            border-color: rgba(96, 165, 250, 0.3);
         }
 
         .social-btn.facebook:hover {
-            background: #0d65d9;
+            background: #1877f2;
+            color: #ffffff;
             transform: translateY(-2px);
         }
 
         .social-btn.whatsapp {
-            background: #25D366;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+            background: rgba(37, 211, 102, 0.15);
+            color: #4ade80;
+            border-color: rgba(74, 222, 128, 0.3);
         }
 
         .social-btn.whatsapp:hover {
-            background: #20bd5a;
+            background: #25D366;
+            color: #ffffff;
             transform: translateY(-2px);
         }
 
         footer {
             text-align: center;
-            margin-top: 50px;
-            padding: 20px;
-            color: #64748b;
-            font-size: 0.9rem;
+            margin-top: 60px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
         }
 
         @media (max-width: 768px) {
             header h1 {
-                font-size: 1.8rem;
+                font-size: 2.1rem;
             }
             body {
-                padding: 20px 12px;
+                padding: 30px 16px;
             }
             .social-links {
                 flex-direction: column;
@@ -286,23 +353,23 @@
 
 <div class="container">
     <header>
-        <div class="brand-title">ValidLeads</div>
-        <h1>B2B Lead Generation & Prospecting Services</h1>
-        <p>Verified Lead Lists, Custom Data Enrichment & Premium Tools Access for Cold Outreach</p>
+        <div class="brand-badge">
+            <span></span> ValidLeads Official
+        </div>
+        <h1>B2B Lead Generation & Prospecting</h1>
+        <p>Verified Email Lists, Custom Data Enrichment & Premium Tools Access for B2B Growth</p>
     </header>
 
     <div class="grid">
         <!-- Service 1 -->
         <div class="card">
             <div>
-                <div class="card-header">
-                    <span class="badge">Apollo Export</span>
-                    <h3>10K Apollo Business Emails</h3>
-                </div>
+                <span class="card-tag">Apollo Export</span>
+                <h3>10K Apollo Business Emails</h3>
                 <ul>
-                    <li>10,000 Verified Business Emails</li>
-                    <li>Directly Exported from Apollo</li>
-                    <li>High Accuracy & Fast Delivery</li>
+                    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> 10,000 Verified Business Emails</li>
+                    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Directly Exported from Apollo</li>
+                    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> High Accuracy & Fast Delivery</li>
                 </ul>
             </div>
             <div>
@@ -319,14 +386,12 @@
         <!-- Service 2 -->
         <div class="card">
             <div>
-                <div class="card-header">
-                    <span class="badge">Direct Dials</span>
-                    <h3>1K Apollo Export + Mobile Numbers</h3>
-                </div>
+                <span class="card-tag">Direct Dials</span>
+                <h3>1K Apollo Export + Mobile Numbers</h3>
                 <ul>
-                    <li>1,000 Verified Business Emails</li>
-                    <li>Direct Dial & Mobile Numbers Included</li>
-                    <li>Optimized for Cold Calling Campaigns</li>
+                    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> 1,000 Verified Business Emails</li>
+                    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Direct Dial & Mobile Numbers</li>
+                    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Optimized for Cold Calling</li>
                 </ul>
             </div>
             <div>
@@ -343,14 +408,12 @@
         <!-- Service 3 -->
         <div class="card">
             <div>
-                <div class="card-header">
-                    <span class="badge">Clay Enrichment</span>
-                    <h3>Multi-Contact Enrichment Package</h3>
-                </div>
+                <span class="card-tag">Clay Enrichment</span>
+                <h3>Multi-Contact Enrichment Package</h3>
                 <ul>
-                    <li>1,000 Apollo Business Emails</li>
-                    <li>Personal Email Addresses (Clay Enriched)</li>
-                    <li>Apollo Direct Mobile Numbers</li>
+                    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> 1,000 Apollo Business Emails</li>
+                    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Personal Emails (Clay Enriched)</li>
+                    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Direct Mobile Numbers</li>
                 </ul>
             </div>
             <div>
@@ -367,14 +430,12 @@
         <!-- Service 4 -->
         <div class="card">
             <div>
-                <div class="card-header">
-                    <span class="badge">Subscription</span>
-                    <h3>LinkedIn Sales Navigator Plan</h3>
-                </div>
+                <span class="card-tag">Subscription</span>
+                <h3>LinkedIn Sales Navigator Plan</h3>
                 <ul>
-                    <li>1 Month Full Access Account</li>
-                    <li>Unlimited Search & Advanced Filters</li>
-                    <li>Saved Lead Lists & InMail Features</li>
+                    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 Month Full Access Account</li>
+                    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Unlimited Advanced Filters</li>
+                    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Saved Lists & InMail Features</li>
                 </ul>
             </div>
             <div>
@@ -391,14 +452,12 @@
         <!-- Service 5 -->
         <div class="card">
             <div>
-                <div class="card-header">
-                    <span class="badge">Manual Research</span>
-                    <h3>100% Manually Verified Leads</h3>
-                </div>
+                <span class="card-tag">Manual Research</span>
+                <h3>100% Manually Verified Leads</h3>
                 <ul>
-                    <li>1,000 Highly Targeted Leads</li>
-                    <li>Hand-curated & Double-Checked Data</li>
-                    <li>Guaranteed 0% Bounce Rate</li>
+                    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> 1,000 Targeted Leads</li>
+                    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Hand-curated & Double-Checked</li>
+                    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Guaranteed 0% Bounce Rate</li>
                 </ul>
             </div>
             <div>
@@ -415,14 +474,12 @@
         <!-- Service 6 -->
         <div class="card">
             <div>
-                <div class="card-header">
-                    <span class="badge">Sales Nav Export</span>
-                    <h3>10K Sales Nav Export (Without Email)</h3>
-                </div>
+                <span class="card-tag">Sales Nav Export</span>
+                <h3>10K Sales Nav Export (No Email)</h3>
                 <ul>
-                    <li>10,000 Profiles Exported to CSV/Excel</li>
-                    <li>Includes Name, Title, Company & Location</li>
-                    <li>Direct LinkedIn Profile URLs Included</li>
+                    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> 10,000 Profiles to CSV/Excel</li>
+                    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Name, Title, Company & Location</li>
+                    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Direct LinkedIn Profile URLs</li>
                 </ul>
             </div>
             <div>
@@ -439,14 +496,12 @@
         <!-- Service 7 -->
         <div class="card">
             <div>
-                <div class="card-header">
-                    <span class="badge">Sales Nav + Email</span>
-                    <h3>10K Sales Nav Export (With Email)</h3>
-                </div>
+                <span class="card-tag">Sales Nav + Email</span>
+                <h3>10K Sales Nav Export (With Email)</h3>
                 <ul>
-                    <li>10,000 Profiles Exported to CSV</li>
-                    <li>Verified Business Emails Included</li>
-                    <li>Ready for Cold Email Outreach</li>
+                    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> 10,000 Profiles Exported to CSV</li>
+                    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Verified Business Emails Included</li>
+                    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Ready for Cold Email Outreach</li>
                 </ul>
             </div>
             <div>
@@ -461,19 +516,19 @@
         </div>
     </div>
 
-    <!-- Contact Us Section -->
+    <!-- Contact Section -->
     <div class="contact-section">
         <h2>Get in Touch with ValidLeads</h2>
-        <p>Have custom requirements or questions? Connect with us directly on social media.</p>
+        <p>Need custom data scraping, enrichment, or targeted prospect lists? Contact us directly.</p>
         <div class="social-links">
             <a href="https://www.linkedin.com/in/mdmehedihasanvalidleads/" target="_blank" class="social-btn linkedin">
-                Connect on LinkedIn
+                <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-0.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.77a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/></svg> LinkedIn
             </a>
             <a href="https://www.facebook.com/mdmehedihasanvalidleads/" target="_blank" class="social-btn facebook">
-                Connect on Facebook
+                <svg viewBox="0 0 24 24"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/></svg> Facebook
             </a>
             <a href="https://wa.me/8801728471484" target="_blank" class="social-btn whatsapp">
-                Message on WhatsApp
+                <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 6.46 17.5 2 12.04 2Z"/></svg> WhatsApp
             </a>
         </div>
     </div>
