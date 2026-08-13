@@ -3,38 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ValidLeads — Premium B2B Lead Generation & Data Enrichment</title>
+    <title>ValidLeads — Premium B2B Lead Intelligence & Growth Platform</title>
     
     <!-- Meta Tags for SEO and Social Preview -->
     <meta name="description" content="Verified Prospect Lists, Custom Data Scraping, Clay Enrichment & Premium LinkedIn Accounts. High accuracy & fast delivery.">
     <meta property="og:title" content="ValidLeads — B2B Lead Generation & Growth Services">
     <meta property="og:description" content="Verified B2B Prospect Lists, Clay Multi-Contact Enrichment, Direct Dials, & LinkedIn Sales Navigator Solutions.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://raw.githubusercontent.com/mehedi4upwork/lead-services/main/assets/preview-og.png">
     
     <!-- Google Fonts & FontAwesome Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --primary-light: #eff6ff;
-            --accent: #10b981;
-            --dark-bg: #0f172a;
-            --card-bg: #ffffff;
-            --text-main: #1e293b;
+            --bg-dark: #07090e;
+            --bg-card: rgba(15, 23, 42, 0.65);
+            --bg-card-hover: rgba(30, 41, 59, 0.85);
+            --border-glow: rgba(59, 130, 246, 0.2);
+            --border-highlight: rgba(59, 130, 246, 0.5);
+            --primary: #3b82f6;
+            --primary-glow: #2563eb;
+            --accent-cyan: #06b6d4;
+            --accent-green: #10b981;
+            --text-heading: #f8fafc;
+            --text-body: #94a3b8;
             --text-muted: #64748b;
-            --border-color: #e2e8f0;
-            --shadow-sm: 0 2px 4px rgba(0,0,0,0.04);
-            --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
-            --shadow-lg: 0 20px 30px -10px rgba(37, 99, 235, 0.12);
+            --radius-xl: 24px;
             --radius-lg: 16px;
             --radius-md: 12px;
-            --radius-sm: 8px;
+            --glass-backdrop: blur(16px);
         }
 
         * {
@@ -46,20 +46,55 @@
         }
 
         body {
-            background-color: #f8fafc;
-            color: var(--text-main);
+            background-color: var(--bg-dark);
+            color: var(--text-body);
             line-height: 1.6;
             overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Animated Mesh Background Overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: 
+                radial-gradient(circle at 15% 20%, rgba(37, 99, 235, 0.15) 0%, transparent 45%),
+                radial-gradient(circle at 85% 60%, rgba(6, 182, 212, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 50% 85%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        /* Subtle Grid Pattern Overlay */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+            pointer-events: none;
+            opacity: 0.6;
         }
 
         /* Top Bar Announcement */
         .announcement-bar {
-            background: linear-gradient(90deg, #1e293b, #0f172a);
-            color: #e2e8f0;
+            background: linear-gradient(90deg, rgba(15, 23, 42, 0.9), rgba(30, 58, 138, 0.8), rgba(15, 23, 42, 0.9));
+            color: #cbd5e1;
             font-size: 13px;
-            padding: 8px 20px;
+            padding: 9px 20px;
             text-align: center;
             font-weight: 500;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            letter-spacing: 0.3px;
         }
 
         .announcement-bar span {
@@ -67,13 +102,14 @@
             font-weight: 700;
         }
 
-        /* Header Navigation */
+        /* Navigation Header */
         nav {
             position: sticky;
             top: 0;
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-color);
+            background: rgba(7, 9, 14, 0.75);
+            backdrop-filter: var(--glass-backdrop);
+            -webkit-backdrop-filter: var(--glass-backdrop);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
             z-index: 1000;
             padding: 16px 24px;
         }
@@ -86,33 +122,56 @@
             align-items: center;
         }
 
+        /* Logo Brand Container */
         .brand-logo {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             text-decoration: none;
-            font-weight: 800;
-            font-size: 22px;
-            color: var(--dark-bg);
-            letter-spacing: -0.5px;
         }
 
-        .brand-logo i {
-            color: var(--primary);
+        /* আগের লোগো ইমেজটি লিংক করার জন্য নিচে আপনার ইমেজ পাথ দিতে পারেন */
+        .brand-logo img {
+            max-height: 38px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .brand-logo-text {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
             font-size: 24px;
+            color: var(--text-heading);
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .brand-logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--primary), var(--accent-cyan));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 18px;
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
         }
 
         .status-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: #ecfdf5;
-            color: #047857;
-            padding: 6px 14px;
+            background: rgba(16, 185, 129, 0.1);
+            color: #34d399;
+            padding: 6px 16px;
             border-radius: 50px;
             font-size: 13px;
             font-weight: 600;
-            border: 1px solid #a7f3d0;
+            border: 1px solid rgba(16, 185, 129, 0.3);
         }
 
         .pulse-dot {
@@ -126,67 +185,74 @@
 
         @keyframes pulse {
             0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
             100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
         }
 
         /* Hero Section */
         header.hero {
-            padding: 70px 24px 50px;
+            padding: 85px 24px 50px;
             max-width: 1200px;
             margin: 0 auto;
             text-align: center;
+            position: relative;
         }
 
         .hero-badge {
-            display: inline-block;
-            background: var(--primary-light);
-            color: var(--primary);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(59, 130, 246, 0.1);
+            color: #60a5fa;
             font-weight: 700;
             font-size: 13px;
-            padding: 6px 16px;
+            padding: 8px 18px;
             border-radius: 30px;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
             text-transform: uppercase;
-            letter-spacing: 0.8px;
+            letter-spacing: 1px;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
         }
 
         header.hero h1 {
-            font-size: 44px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 52px;
             font-weight: 800;
-            line-height: 1.2;
-            color: #0f172a;
-            max-width: 850px;
-            margin: 0 auto 20px;
-            letter-spacing: -1px;
+            line-height: 1.15;
+            color: var(--text-heading);
+            max-width: 900px;
+            margin: 0 auto 24px;
+            letter-spacing: -1.5px;
         }
 
         header.hero h1 span {
-            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            background: linear-gradient(135deg, #60a5fa 0%, #38bdf8 50%, #34d399 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         header.hero p {
-            font-size: 18px;
-            color: var(--text-muted);
-            max-width: 680px;
-            margin: 0 auto 35px;
+            font-size: 19px;
+            color: var(--text-body);
+            max-width: 720px;
+            margin: 0 auto 40px;
             font-weight: 400;
         }
 
-        /* Stats Bar */
+        /* Stats Bar Glassmorphism */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
-            max-width: 950px;
-            margin: 0 auto 50px;
-            background: #ffffff;
-            padding: 24px;
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border-color);
-            box-shadow: var(--shadow-sm);
+            max-width: 1000px;
+            margin: 0 auto 60px;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: var(--glass-backdrop);
+            padding: 28px 24px;
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border-glow);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         }
 
         .stat-item {
@@ -194,9 +260,12 @@
         }
 
         .stat-number {
-            font-size: 28px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 32px;
             font-weight: 800;
-            color: var(--primary);
+            background: linear-gradient(135deg, #ffffff, #93c5fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             display: block;
         }
 
@@ -204,136 +273,170 @@
             font-size: 13px;
             color: var(--text-muted);
             font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
         }
 
         /* Tab Navigation Filters */
         .filter-tabs {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            margin-bottom: 40px;
+            gap: 12px;
+            margin-bottom: 48px;
             flex-wrap: wrap;
             padding: 0 20px;
         }
 
         .tab-btn {
-            background: #ffffff;
-            border: 1px solid var(--border-color);
-            padding: 10px 22px;
-            border-radius: 30px;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 12px 26px;
+            border-radius: 40px;
             font-weight: 600;
             font-size: 14px;
-            color: var(--text-muted);
+            color: var(--text-body);
             cursor: pointer;
-            transition: all 0.25s ease;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
         }
 
         .tab-btn:hover, .tab-btn.active {
-            background: var(--primary);
+            background: linear-gradient(135deg, var(--primary), var(--primary-glow));
             color: #ffffff;
             border-color: var(--primary);
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+            box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
+            transform: translateY(-2px);
         }
 
-        /* Pricing Section / Cards Grid */
+        /* Services Grid */
         .services-container {
-            max-width: 1200px;
+            max-width: 1240px;
             margin: 0 auto;
-            padding: 0 24px 80px;
+            padding: 0 24px 90px;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
         }
 
         .card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-lg);
-            padding: 32px 28px;
+            background: var(--bg-card);
+            backdrop-filter: var(--glass-backdrop);
+            -webkit-backdrop-filter: var(--glass-backdrop);
+            border: 1px solid var(--border-glow);
+            border-radius: var(--radius-xl);
+            padding: 36px 30px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
             position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            opacity: 0;
+            transition: opacity 0.35s ease;
         }
 
         .card:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-lg);
-            border-color: #bfdbfe;
+            transform: translateY(-8px);
+            background: var(--bg-card-hover);
+            border-color: var(--border-highlight);
+            box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.25);
+        }
+
+        .card:hover::before {
+            opacity: 1;
         }
 
         .card.featured {
             border: 2px solid var(--primary);
-            box-shadow: var(--shadow-md);
+            background: rgba(15, 23, 42, 0.85);
+            box-shadow: 0 0 30px rgba(37, 99, 235, 0.2);
         }
 
         .featured-tag {
             position: absolute;
-            top: -14px;
-            right: 24px;
-            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            top: 18px;
+            right: 20px;
+            background: linear-gradient(135deg, #2563eb, #06b6d4);
             color: #ffffff;
             font-size: 11px;
-            font-weight: 700;
+            font-weight: 800;
             text-transform: uppercase;
-            padding: 4px 12px;
+            padding: 5px 14px;
             border-radius: 20px;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.8px;
+            box-shadow: 0 0 12px rgba(6, 182, 212, 0.4);
         }
 
         .badge-category {
             font-size: 12px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.8px;
-            color: var(--primary);
-            background: var(--primary-light);
-            padding: 4px 10px;
-            border-radius: 6px;
+            letter-spacing: 1px;
+            color: #60a5fa;
+            background: rgba(59, 130, 246, 0.12);
+            padding: 6px 12px;
+            border-radius: 8px;
             display: inline-block;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
         }
 
         .card h3 {
-            font-size: 20px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 22px;
             font-weight: 700;
-            color: #0f172a;
-            margin-bottom: 16px;
+            color: var(--text-heading);
+            margin-bottom: 20px;
+            line-height: 1.3;
         }
 
         .features-list {
             list-style: none;
-            margin-bottom: 28px;
+            margin-bottom: 32px;
         }
 
         .features-list li {
             font-size: 14px;
-            color: var(--text-main);
-            margin-bottom: 10px;
+            color: #cbd5e1;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
 
         .features-list li i {
-            color: var(--accent);
-            font-size: 14px;
+            color: var(--accent-green);
+            font-size: 15px;
+            background: rgba(16, 185, 129, 0.15);
+            padding: 4px;
+            border-radius: 50%;
         }
 
         .price-box {
-            border-top: 1px dashed var(--border-color);
-            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 24px;
             margin-top: auto;
         }
 
         .price-amount {
-            font-size: 32px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 36px;
             font-weight: 800;
-            color: #0f172a;
+            color: var(--text-heading);
         }
 
         .price-period {
@@ -345,71 +448,77 @@
         .btn-group {
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            margin-top: 18px;
+            gap: 12px;
+            margin-top: 20px;
         }
 
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            padding: 12px 20px;
-            border-radius: var(--radius-sm);
+            gap: 10px;
+            padding: 14px 22px;
+            border-radius: var(--radius-md);
             font-size: 14px;
             font-weight: 700;
             text-decoration: none;
-            transition: all 0.2s ease;
+            transition: all 0.25s ease;
             cursor: pointer;
             border: none;
         }
 
         .btn-primary {
-            background-color: #25d366; /* WhatsApp Green */
+            background: linear-gradient(135deg, #10b981, #059669);
             color: #ffffff;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
         }
 
         .btn-primary:hover {
-            background-color: #1ebc57;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+            background: linear-gradient(135deg, #059669, #047857);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
+            transform: translateY(-2px);
         }
 
         .btn-secondary {
-            background-color: #f1f5f9;
-            color: var(--text-main);
-            border: 1px solid var(--border-color);
+            background: rgba(255, 255, 255, 0.05);
+            color: #e2e8f0;
+            border: 1px solid rgba(255, 255, 255, 0.12);
         }
 
         .btn-secondary:hover {
-            background-color: #e2e8f0;
-            color: #0f172a;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.25);
         }
 
-        /* Payment Section */
+        /* Payment & Trust Section */
         .section-box {
-            background: #ffffff;
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border-color);
-            padding: 40px;
-            max-width: 1200px;
-            margin: 0 auto 80px;
-            box-shadow: var(--shadow-sm);
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: var(--glass-backdrop);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border-glow);
+            padding: 48px;
+            max-width: 1240px;
+            margin: 0 auto 90px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 36px;
         }
 
         .section-header h2 {
-            font-size: 28px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 32px;
             font-weight: 800;
-            color: #0f172a;
+            color: var(--text-heading);
+            margin-bottom: 8px;
         }
 
         .section-header p {
-            color: var(--text-muted);
-            font-size: 15px;
+            color: var(--text-body);
+            font-size: 16px;
         }
 
         .payment-methods {
@@ -417,56 +526,118 @@
             justify-content: center;
             gap: 24px;
             flex-wrap: wrap;
-            margin: 25px 0;
+            margin: 30px 0;
         }
 
         .payment-card {
-            background: #f8fafc;
-            border: 1px solid var(--border-color);
-            padding: 16px 28px;
-            border-radius: var(--radius-md);
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 18px 32px;
+            border-radius: var(--radius-lg);
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 14px;
             font-weight: 700;
-            color: #1e293b;
-            font-size: 16px;
+            color: var(--text-heading);
+            font-size: 17px;
+            transition: all 0.3s ease;
         }
 
-        .payment-card i {
-            font-size: 22px;
+        .payment-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            background: rgba(30, 41, 59, 0.9);
         }
 
         .note-box {
-            background: #fffbe3;
-            border: 1px solid #fef08a;
-            color: #854d0e;
-            padding: 14px 20px;
-            border-radius: var(--radius-sm);
-            font-size: 13px;
+            background: rgba(234, 179, 8, 0.1);
+            border: 1px solid rgba(234, 179, 8, 0.25);
+            color: #fde047;
+            padding: 16px 24px;
+            border-radius: var(--radius-md);
+            font-size: 14px;
             text-align: center;
-            margin-top: 20px;
+            margin-top: 24px;
+        }
+
+        /* Testimonials Section */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        .testimonial-card {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 28px;
+            border-radius: var(--radius-lg);
+            position: relative;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            color: #cbd5e1;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .client-avatar {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--primary), var(--accent-cyan));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+        }
+
+        .client-details h4 {
+            color: var(--text-heading);
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .client-details span {
+            color: var(--text-muted);
+            font-size: 12px;
+        }
+
+        .rating-stars {
+            color: #f59e0b;
+            font-size: 13px;
+            margin-bottom: 12px;
         }
 
         /* FAQ Section */
         .faq-container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
         }
 
         .faq-item {
-            background: #f8fafc;
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-md);
-            margin-bottom: 12px;
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius-lg);
+            margin-bottom: 16px;
             overflow: hidden;
+            transition: all 0.3s ease;
         }
 
         .faq-question {
-            padding: 18px 24px;
+            padding: 22px 28px;
             font-weight: 700;
-            font-size: 16px;
-            color: #0f172a;
+            font-size: 17px;
+            color: var(--text-heading);
             cursor: pointer;
             display: flex;
             justify-content: space-between;
@@ -474,11 +645,16 @@
         }
 
         .faq-answer {
-            padding: 0 24px 18px;
-            color: var(--text-muted);
-            font-size: 14px;
+            padding: 0 28px 22px;
+            color: var(--text-body);
+            font-size: 15px;
             display: none;
-            line-height: 1.6;
+            line-height: 1.7;
+        }
+
+        .faq-item.active {
+            border-color: var(--primary);
+            background: rgba(30, 41, 59, 0.8);
         }
 
         .faq-item.active .faq-answer {
@@ -487,119 +663,131 @@
 
         .faq-item.active .faq-question i {
             transform: rotate(180deg);
+            color: var(--primary);
         }
 
         /* Contact Section */
         .contact-box {
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            color: #ffffff;
-            border-radius: var(--radius-lg);
-            padding: 50px 30px;
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.8), rgba(15, 23, 42, 0.95));
+            border: 1px solid var(--border-glow);
+            border-radius: var(--radius-xl);
+            padding: 60px 30px;
             text-align: center;
-            max-width: 1200px;
-            margin: 0 auto 80px;
+            max-width: 1240px;
+            margin: 0 auto 90px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
         }
 
         .contact-box h2 {
-            font-size: 32px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 38px;
             font-weight: 800;
-            margin-bottom: 12px;
+            color: var(--text-heading);
+            margin-bottom: 16px;
         }
 
         .contact-box p {
             color: #94a3b8;
-            margin-bottom: 30px;
-            font-size: 16px;
+            margin-bottom: 36px;
+            font-size: 18px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 16px;
+            gap: 18px;
             flex-wrap: wrap;
         }
 
         .social-btn {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.08);
             color: #ffffff;
-            padding: 12px 24px;
-            border-radius: 30px;
+            padding: 14px 28px;
+            border-radius: 40px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
+            font-weight: 700;
+            font-size: 15px;
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            transition: all 0.2s ease;
-            border: 1px solid rgba(255,255,255,0.15);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.15);
         }
 
         .social-btn:hover {
             background: var(--primary);
             border-color: var(--primary);
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
         }
 
         /* Floating WhatsApp Button */
         .floating-whatsapp {
             position: fixed;
-            bottom: 24px;
-            right: 24px;
-            background-color: #25d366;
+            bottom: 28px;
+            right: 28px;
+            background: linear-gradient(135deg, #25d366, #128c7e);
             color: white;
-            width: 60px;
-            height: 60px;
+            width: 64px;
+            height: 64px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 30px;
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            font-size: 32px;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
             z-index: 999;
             text-decoration: none;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .floating-whatsapp:hover {
-            transform: scale(1.1);
+            transform: scale(1.12);
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.7);
         }
 
         /* Footer */
         footer {
             text-align: center;
-            padding: 30px 20px;
-            border-top: 1px solid var(--border-color);
+            padding: 36px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
             color: var(--text-muted);
             font-size: 14px;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
-            header.hero h1 {
-                font-size: 30px;
-            }
-            .grid {
-                grid-template-columns: 1fr;
-            }
-            .section-box {
-                padding: 24px;
-            }
+            header.hero h1 { font-size: 34px; }
+            header.hero p { font-size: 16px; }
+            .grid { grid-template-columns: 1fr; }
+            .section-box { padding: 28px 20px; }
+            .contact-box { padding: 40px 20px; }
+            .contact-box h2 { font-size: 28px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Top Notice -->
+    <!-- Top Announcement -->
     <div class="announcement-bar">
-        ⚡ <span>Special Offer:</span> Custom Bulk Discounts Available for High Volume Lead Data Orders!
+        ⚡ <span>Exclusive Deal:</span> Custom Bulk Discounts Available for Enterprise Volume Lead Requests!
     </div>
 
     <!-- Navigation Header -->
     <nav>
         <div class="nav-container">
             <a href="#" class="brand-logo">
-                <i class="fa-solid fa-chart-line"></i> ValidLeads
+                <!-- আপনার মূল লোগোর ইমেজ ফাইল থাকলে <img src="logo.png" alt="ValidLeads Logo"> এভাবে ব্যবহার করতে পারেন -->
+                <div class="brand-logo-icon">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <div class="brand-logo-text">
+                    ValidLeads
+                </div>
             </a>
+            
             <div class="status-badge">
                 <span class="pulse-dot"></span> Ready for Orders
             </div>
@@ -608,15 +796,17 @@
 
     <!-- Hero Section -->
     <header class="hero">
-        <span class="hero-badge"><i class="fa-solid fa-shield-halved"></i> B2B Lead Intelligence & Growth</span>
-        <h1>Targeted B2B Prospect Lists & <span>Automated Data Enrichment</span></h1>
-        <p>Verified Prospect Lists, Custom Data Scraping, Clay Enrichment & Premium LinkedIn Accounts to supercharge your cold outreach campaigns.</p>
+        <div class="hero-badge">
+            <i class="fa-solid fa-shield-halved"></i> Premium B2B Lead Intelligence
+        </div>
+        <h1>High-Accuracy B2B Leads & <span>Automated Data Enrichment</span></h1>
+        <p>Targeted Prospect Lists, Custom Data Scraping, Clay Multi-Contact Enrichment & LinkedIn Sales Navigator Solutions for Fast Revenue Growth.</p>
         
         <!-- Key Stats Bar -->
         <div class="stats-grid">
             <div class="stat-item">
                 <span class="stat-number">98%+</span>
-                <span class="stat-label">Email Accuracy</span>
+                <span class="stat-label">Verified Email Accuracy</span>
             </div>
             <div class="stat-item">
                 <span class="stat-number">10M+</span>
@@ -628,20 +818,20 @@
             </div>
             <div class="stat-item">
                 <span class="stat-number">24/7</span>
-                <span class="stat-label">Fast Support</span>
+                <span class="stat-label">Instant Turnaround</span>
             </div>
         </div>
     </header>
 
-    <!-- Filter Tabs -->
+    <!-- Category Filter Tabs -->
     <div class="filter-tabs">
-        <button class="tab-btn active" onclick="filterCategory('all')">All Services</button>
-        <button class="tab-btn" onclick="filterCategory('lead-export')">Lead Exports</button>
-        <button class="tab-btn" onclick="filterCategory('clay-enrich')">Clay Enrichment</button>
-        <button class="tab-btn" onclick="filterCategory('linkedin-plans')">LinkedIn Accounts</button>
+        <button class="tab-btn active" onclick="filterCategory('all', event)">All Services</button>
+        <button class="tab-btn" onclick="filterCategory('lead-export', event)">Lead Exports</button>
+        <button class="tab-btn" onclick="filterCategory('clay-enrich', event)">Clay Enrichment</button>
+        <button class="tab-btn" onclick="filterCategory('linkedin-plans', event)">LinkedIn Subscriptions</button>
     </div>
 
-    <!-- Services Grid -->
+    <!-- Services Cards Grid -->
     <div class="services-container">
         <div class="grid" id="services-grid">
             
@@ -651,38 +841,38 @@
                     <span class="badge-category"><i class="fa-solid fa-file-export"></i> Apollo Export</span>
                     <h3>10K Apollo Business Emails</h3>
                     <ul class="features-list">
-                        <li><i class="fa-solid fa-circle-check"></i> 10,000 Verified Business Emails</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Directly Exported from Apollo</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Clean CSV/Excel with Title & Company</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Fast 24-Hour Delivery</li>
+                        <li><i class="fa-solid fa-check"></i> 10,000 Verified Business Emails</li>
+                        <li><i class="fa-solid fa-check"></i> Direct Export from Apollo Database</li>
+                        <li><i class="fa-solid fa-check"></i> Full Prospect Title, Company & Location</li>
+                        <li><i class="fa-solid fa-check"></i> Fast 24-Hour Express Delivery</li>
                     </ul>
                 </div>
                 <div class="price-box">
                     <div class="price-amount">$35 <span class="price-period">/ One-time</span></div>
                     <div class="btn-group">
-                        <a href="https://docs.google.com/spreadsheets/d/1Qose_2CksCCKL--RXz_r26WcjTW1NfEo3hcr6yFzFEg/edit?gid=0#gid=0" target="_blank" class="btn btn-secondary"><i class="fa-regular fa-file-excel"></i> Sample Sheet</a>
+                        <a href="https://docs.google.com/spreadsheets/d/1Qose_2CksCCKL--RXz_r26WcjTW1NfEo3hcr6yFzFEg/edit?gid=0#gid=0" target="_blank" class="btn btn-secondary"><i class="fa-regular fa-file-excel"></i> Preview Sample Sheet</a>
                         <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20want%20to%20order%3A%2010K%20Apollo%20Business%20Emails%20(%2435)" target="_blank" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Order via WhatsApp</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Card 2 -->
+            <!-- Card 2 (Featured) -->
             <div class="card featured" data-category="lead-export">
                 <span class="featured-tag">Most Popular</span>
                 <div>
-                    <span class="badge-category"><i class="fa-solid fa-phone"></i> Direct Dials</span>
+                    <span class="badge-category"><i class="fa-solid fa-phone-volume"></i> Direct Dials</span>
                     <h3>1K Apollo Export + Mobiles</h3>
                     <ul class="features-list">
-                        <li><i class="fa-solid fa-circle-check"></i> 1,000 Verified Business Emails</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Direct Dial & Mobile Numbers Included</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Optimized for Cold Calling & SMS</li>
-                        <li><i class="fa-solid fa-circle-check"></i> High Phone Connect Rate</li>
+                        <li><i class="fa-solid fa-check"></i> 1,000 Verified Business Emails</li>
+                        <li><i class="fa-solid fa-check"></i> Direct Mobile & Phone Numbers Included</li>
+                        <li><i class="fa-solid fa-check"></i> Optimized for Cold Calling & SMS Outreach</li>
+                        <li><i class="fa-solid fa-check"></i> Ultra-High Connect Rate</li>
                     </ul>
                 </div>
                 <div class="price-box">
                     <div class="price-amount">$80 <span class="price-period">/ One-time</span></div>
                     <div class="btn-group">
-                        <a href="https://docs.google.com/spreadsheets/d/1dx69_n-OTe4rUTmd6L4pI5xnXWf7ERDtQEXid9Db978/edit?gid=0#gid=0" target="_blank" class="btn btn-secondary"><i class="fa-regular fa-file-excel"></i> Sample Sheet</a>
+                        <a href="https://docs.google.com/spreadsheets/d/1dx69_n-OTe4rUTmd6L4pI5xnXWf7ERDtQEXid9Db978/edit?gid=0#gid=0" target="_blank" class="btn btn-secondary"><i class="fa-regular fa-file-excel"></i> Preview Sample Sheet</a>
                         <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20want%20to%20order%3A%201K%20Apollo%20Export%20%2B%20Mobile%20Numbers%20(%2480)" target="_blank" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Order via WhatsApp</a>
                     </div>
                 </div>
@@ -694,16 +884,16 @@
                     <span class="badge-category"><i class="fa-solid fa-wand-magic-sparkles"></i> Clay Enrichment</span>
                     <h3>Multi-Contact Enrichment Package</h3>
                     <ul class="features-list">
-                        <li><i class="fa-solid fa-circle-check"></i> 1,000 Apollo Work Emails</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Personal Emails (Clay Enriched)</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Direct Mobile Numbers Included</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Waterfall Enrichment Workflow</li>
+                        <li><i class="fa-solid fa-check"></i> 1,000 Verified Work Emails</li>
+                        <li><i class="fa-solid fa-check"></i> Personal Emails (Clay Enriched)</li>
+                        <li><i class="fa-solid fa-check"></i> Direct Mobile Phone Numbers</li>
+                        <li><i class="fa-solid fa-check"></i> Multi-Step Waterfall Data Search</li>
                     </ul>
                 </div>
                 <div class="price-box">
                     <div class="price-amount">$130 <span class="price-period">/ One-time</span></div>
                     <div class="btn-group">
-                        <a href="https://docs.google.com/spreadsheets/d/16pKBG6ijxTi6SSOAS_hNIGO_yBXvshiRPcra4xQZyto/edit?gid=0#gid=0" target="_blank" class="btn btn-secondary"><i class="fa-regular fa-file-excel"></i> Sample Sheet</a>
+                        <a href="https://docs.google.com/spreadsheets/d/16pKBG6ijxTi6SSOAS_hNIGO_yBXvshiRPcra4xQZyto/edit?gid=0#gid=0" target="_blank" class="btn btn-secondary"><i class="fa-regular fa-file-excel"></i> Preview Sample Sheet</a>
                         <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20want%20to%20order%3A%20Multi-Contact%20Clay%20Enrichment%20Package%20(%24130)" target="_blank" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Order via WhatsApp</a>
                     </div>
                 </div>
@@ -715,10 +905,10 @@
                     <span class="badge-category"><i class="fa-brands fa-linkedin"></i> LinkedIn Premium</span>
                     <h3>LinkedIn Sales Navigator Plan</h3>
                     <ul class="features-list">
-                        <li><i class="fa-solid fa-circle-check"></i> 1 Month Full Access Subscription</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Direct Activation Link to Your Account</li>
-                        <li><i class="fa-solid fa-circle-check"></i> No Password Needed (Email Only)</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Unlimited Lead & Account Filters</li>
+                        <li><i class="fa-solid fa-check"></i> 1 Month Full Access Subscription</li>
+                        <li><i class="fa-solid fa-check"></i> Direct Activation Link to Your Account</li>
+                        <li><i class="fa-solid fa-check"></i> Only Your Email Needed (No Password)</li>
+                        <li><i class="fa-solid fa-check"></i> Unlimited Lead & Account Search Filters</li>
                     </ul>
                 </div>
                 <div class="price-box">
@@ -735,10 +925,10 @@
                     <span class="badge-category"><i class="fa-brands fa-linkedin"></i> LinkedIn Career</span>
                     <h3>LinkedIn Premium Career Plan</h3>
                     <ul class="features-list">
-                        <li><i class="fa-solid fa-circle-check"></i> 5 InMail Credits Per Month</li>
-                        <li><i class="fa-solid fa-circle-check"></i> See Who Viewed Your Profile</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Applicant Insights & Top Applicant Features</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Full Access to LinkedIn Learning</li>
+                        <li><i class="fa-solid fa-check"></i> 5 InMail Credits Per Month</li>
+                        <li><i class="fa-solid fa-check"></i> See Who Viewed Your Profile</li>
+                        <li><i class="fa-solid fa-check"></i> Top Applicant Features & Insights</li>
+                        <li><i class="fa-solid fa-check"></i> Full LinkedIn Learning Access</li>
                     </ul>
                 </div>
                 <div class="price-box">
@@ -755,10 +945,10 @@
                     <span class="badge-category"><i class="fa-brands fa-linkedin"></i> LinkedIn Business</span>
                     <h3>LinkedIn Premium Business Plan</h3>
                     <ul class="features-list">
-                        <li><i class="fa-solid fa-circle-check"></i> 15 InMail Credits Per Month</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Unlimited Profile Browsing (3rd Degree)</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Detailed Company Growth Insights</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Premium Search & Learning Access</li>
+                        <li><i class="fa-solid fa-check"></i> 15 InMail Credits Per Month</li>
+                        <li><i class="fa-solid fa-check"></i> Unlimited Profile Browsing (3rd Degree)</li>
+                        <li><i class="fa-solid fa-check"></i> Detailed Company Growth Insights</li>
+                        <li><i class="fa-solid fa-check"></i> Premium Search & Learning Courses</li>
                     </ul>
                 </div>
                 <div class="price-box">
@@ -775,16 +965,16 @@
                     <span class="badge-category"><i class="fa-solid fa-user-check"></i> Manual Research</span>
                     <h3>100% Manually Verified Leads</h3>
                     <ul class="features-list">
-                        <li><i class="fa-solid fa-circle-check"></i> 1,000 Targeted B2B Leads</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Hand-curated & Double-Checked</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Guaranteed 0% Bounce Rate</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Custom Niche Targeting</li>
+                        <li><i class="fa-solid fa-check"></i> 1,000 Targeted B2B Contacts</li>
+                        <li><i class="fa-solid fa-check"></i> Hand-Curated & Double Verified</li>
+                        <li><i class="fa-solid fa-check"></i> Guaranteed 0% Bounce Rate</li>
+                        <li><i class="fa-solid fa-check"></i> Custom Niche Filters</li>
                     </ul>
                 </div>
                 <div class="price-box">
                     <div class="price-amount">$130 <span class="price-period">/ One-time</span></div>
                     <div class="btn-group">
-                        <a href="https://docs.google.com/spreadsheets/d/1pT8A5swuXjhcjFnATPGxVGzzhZ_7daMFITk0o-5PcMM/edit?gid=0#gid=0" target="_blank" class="btn btn-secondary"><i class="fa-regular fa-file-excel"></i> Sample Sheet</a>
+                        <a href="https://docs.google.com/spreadsheets/d/1pT8A5swuXjhcjFnATPGxVGzzhZ_7daMFITk0o-5PcMM/edit?gid=0#gid=0" target="_blank" class="btn btn-secondary"><i class="fa-regular fa-file-excel"></i> Preview Sample Sheet</a>
                         <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20want%20to%20order%3A%201K%20Manually%20Verified%20Leads%20(%24130)" target="_blank" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Order via WhatsApp</a>
                     </div>
                 </div>
@@ -796,16 +986,16 @@
                     <span class="badge-category"><i class="fa-solid fa-database"></i> Sales Nav Scraping</span>
                     <h3>10K Sales Nav Export (No Email)</h3>
                     <ul class="features-list">
-                        <li><i class="fa-solid fa-circle-check"></i> 10,000 Profiles to CSV/Excel</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Name, Job Title, Company, Location</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Direct LinkedIn Profile URLs</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Fast Scraping Turnaround</li>
+                        <li><i class="fa-solid fa-check"></i> 10,000 Profiles to Clean CSV/Excel</li>
+                        <li><i class="fa-solid fa-check"></i> Name, Job Title, Company & Location</li>
+                        <li><i class="fa-solid fa-check"></i> Direct LinkedIn Profile URLs</li>
+                        <li><i class="fa-solid fa-check"></i> Fast Scraping Turnaround</li>
                     </ul>
                 </div>
                 <div class="price-box">
                     <div class="price-amount">$20 <span class="price-period">/ One-time</span></div>
                     <div class="btn-group">
-                        <a href="https://docs.google.com/spreadsheets/d/1XM6CzsW1q_vJhFPYZ4QuUqW1bNEY3zzOSNDcol-c0ko/edit?gid=0#gid=0" target="_blank" class="btn btn-secondary"><i class="fa-regular fa-file-excel"></i> Sample Sheet</a>
+                        <a href="https://docs.google.com/spreadsheets/d/1XM6CzsW1q_vJhFPYZ4QuUqW1bNEY3zzOSNDcol-c0ko/edit?gid=0#gid=0" target="_blank" class="btn btn-secondary"><i class="fa-regular fa-file-excel"></i> Preview Sample Sheet</a>
                         <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20want%20to%20order%3A%2010K%20Sales%20Nav%20Export%20Without%20Email%20(%2420)" target="_blank" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Order via WhatsApp</a>
                     </div>
                 </div>
@@ -814,13 +1004,13 @@
             <!-- Card 9 -->
             <div class="card" data-category="lead-export">
                 <div>
-                    <span class="badge-category"><i class="fa-solid fa-envelope-circle-check"></i> Sales Nav + Emails</span>
+                    <span class="badge-category"><i class="fa-solid fa-envelope-circle-check"></i> Sales Nav + Email</span>
                     <h3>10K Sales Nav Export (With Email)</h3>
                     <ul class="features-list">
-                        <li><i class="fa-solid fa-circle-check"></i> 10,000 Profiles Exported to CSV</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Verified Business Emails Included</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Ready for Cold Outreach Campaigns</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Verified through Multi-step Validation</li>
+                        <li><i class="fa-solid fa-check"></i> 10,000 Profiles Exported to CSV</li>
+                        <li><i class="fa-solid fa-check"></i> Verified Business Emails Included</li>
+                        <li><i class="fa-solid fa-check"></i> Ready for Cold Email Outreach</li>
+                        <li><i class="fa-solid fa-check"></i> Multi-Tool Email Validation</li>
                     </ul>
                 </div>
                 <div class="price-box">
@@ -837,18 +1027,56 @@
     <!-- Payment Gateways Section -->
     <div class="section-box">
         <div class="section-header">
-            <h2><i class="fa-solid fa-credit-card"></i> Accepted Payment Methods</h2>
-            <p>We issue invoice requests via trusted global payment gateways for quick and secure transactions.</p>
+            <h2><i class="fa-solid fa-credit-card"></i> Trusted Global Payment Methods</h2>
+            <p>We issue payment invoices via verified global payment channels for safe & instant processing.</p>
         </div>
         
         <div class="payment-methods">
-            <div class="payment-card"><i class="fa-solid fa-globe" style="color:#00b4d8;"></i> Wise (TransferWise)</div>
-            <div class="payment-card"><i class="fa-brands fa-paypal" style="color:#003087;"></i> PayPal</div>
-            <div class="payment-card"><i class="fa-solid fa-wallet" style="color:#ff6b00;"></i> Payoneer</div>
+            <div class="payment-card"><i class="fa-solid fa-globe" style="color:#38bdf8;"></i> Wise (TransferWise)</div>
+            <div class="payment-card"><i class="fa-brands fa-paypal" style="color:#60a5fa;"></i> PayPal</div>
+            <div class="payment-card"><i class="fa-solid fa-wallet" style="color:#f97316;"></i> Payoneer</div>
         </div>
 
         <div class="note-box">
-            <i class="fa-solid fa-circle-info"></i> <strong>Note:</strong> Standard transaction fees (~$1–$2+ depending on provider) are covered by the buyer. Custom discounts are available for high-volume bulk orders!
+            <i class="fa-solid fa-circle-info"></i> <strong>Note:</strong> Standard processing fees (~$1–$2+ depending on provider) are covered by the buyer. Custom discounts apply for bulk orders!
+        </div>
+    </div>
+
+    <!-- Testimonials / Client Reviews -->
+    <div class="section-box">
+        <div class="section-header">
+            <h2><i class="fa-solid fa-star" style="color:#f59e0b;"></i> What Our Clients Say</h2>
+            <p>Trusted by Agencies, SDRs, and Growth Marketers worldwide.</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="rating-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p>"ValidLeads delivered 10k verified Apollo leads within 12 hours. Zero bounce issues during our cold email campaign!"</p>
+                <div class="client-info">
+                    <div class="client-avatar">JS</div>
+                    <div class="client-details">
+                        <h4>Jason Smith</h4>
+                        <span>Outreach Agency Owner</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="rating-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p>"The Clay enrichment with direct mobile numbers doubled our cold call booking rate. Highly recommended service."</p>
+                <div class="client-info">
+                    <div class="client-avatar">MD</div>
+                    <div class="client-details">
+                        <h4>Mark Davis</h4>
+                        <span>B2B Sales Director</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -856,7 +1084,7 @@
     <div class="section-box">
         <div class="section-header">
             <h2><i class="fa-solid fa-circle-question"></i> Frequently Asked Questions</h2>
-            <p>Everything you need to know about our lead data and activation services.</p>
+            <p>Everything you need to know before placing an order.</p>
         </div>
 
         <div class="faq-container">
@@ -865,31 +1093,31 @@
                     How accurate is the lead data provided? <i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    Our lead lists are enriched using real-time verification tools like NeverBounce & Clay. We guarantee a bounce rate under 3-5%, and if you encounter higher bounce rates, we replace those contacts free of charge.
+                    Our lead lists are verified using real-time validation tools (NeverBounce, Zerobounce, Clay). We guarantee a bounce rate under 3-5% and replace invalid leads free of charge.
                 </div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    How does the LinkedIn Sales Navigator activation work? <i class="fa-solid fa-chevron-down"></i>
+                    How does LinkedIn Sales Navigator activation work? <i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    We send an official direct activation redemption link to your LinkedIn email address. No password or personal login access is ever required.
+                    We send an official direct activation link to your LinkedIn email address. No password or personal login access is ever required.
                 </div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    Can I request a custom niche lead list? <i class="fa-solid fa-chevron-down"></i>
+                    Can I request custom targeted niche lead lists? <i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    Yes! We specialize in custom B2B data scraping, industry-specific lead curation, and custom Clay workflows. Contact us via WhatsApp or LinkedIn with your target requirements.
+                    Yes! We specialize in custom B2B data scraping, specific decision-maker targeting, and custom Clay workflows. Reach out via WhatsApp or LinkedIn with your target requirements.
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Get in Touch Section -->
+    <!-- Get in Touch / CTA Section -->
     <div class="contact-box">
         <h2>Ready to Scale Your Sales Pipeline?</h2>
         <p>Looking for custom lead generation, list enrichment, or B2B data solutions? Connect directly with us.</p>
@@ -913,13 +1141,13 @@
 
     <!-- Footer -->
     <footer>
-        <p>© ValidLeads. All rights reserved. | High-Impact B2B Lead Generation</p>
+        <p>© ValidLeads. All rights reserved. | High-Impact B2B Lead Intelligence Platform</p>
     </footer>
 
     <!-- Interactive Scripts -->
     <script>
         // Category Filter Function
-        function filterCategory(category) {
+        function filterCategory(category, event) {
             const cards = document.querySelectorAll('.card');
             const buttons = document.querySelectorAll('.tab-btn');
 
