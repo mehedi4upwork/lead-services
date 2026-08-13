@@ -214,6 +214,12 @@
             text-transform: uppercase;
         }
 
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
         .btn {
             display: flex;
             align-items: center;
@@ -234,6 +240,39 @@
             opacity: 0.95;
             transform: translateY(-1px);
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-sample {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: rgba(56, 189, 248, 0.08);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            color: var(--accent-blue);
+            text-decoration: none;
+            padding: 11px 18px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.88rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-sample:hover {
+            background: rgba(56, 189, 248, 0.18);
+            border-color: rgba(56, 189, 248, 0.5);
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+
+        .btn-sample svg {
+            width: 16px;
+            height: 16px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
         }
 
         /* Contact Section */
@@ -377,9 +416,15 @@
                     <span class="price">$35</span>
                     <span class="price-label">/ One-time</span>
                 </div>
-                <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20want%20to%20order%3A%2010K%20Apollo%20Business%20Emails%20(%2435)" target="_blank" class="btn">
-                    Order via WhatsApp
-                </a>
+                <div class="btn-group">
+                    <a href="https://docs.google.com/spreadsheets/d/1Qose_2CksCCKL--RXz_r26WcjTW1NfEo3hcr6yFzFEg/edit?gid=0#gid=0" target="_blank" class="btn-sample">
+                        <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        Preview Sample Sheet
+                    </a>
+                    <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20want%20to%20order%3A%2010K%20Apollo%20Business%20Emails%20(%2435)" target="_blank" class="btn">
+                        Order via WhatsApp
+                    </a>
+                </div>
             </div>
         </div>
 
