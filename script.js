@@ -159,8 +159,9 @@
                 var gmail = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + EMAIL + '&su=' + subject + '&body=' + encodeURIComponent(body);
                 var mailto = 'mailto:' + EMAIL + '?subject=' + subject + '&body=' + encodeURIComponent(body);
                 showStatus('error', [
-                    'We could not send this automatically. Please email us at ' + EMAIL + ', or use one of these: ',
-                    link('open in Gmail', gmail), ' or ', link('open in your email app', mailto), '.'
+                    'Sorry, the email could not be sent automatically. Please use ',
+                    link('Send on WhatsApp', 'https://wa.me/8801728471484?text=' + encodeURIComponent(body)), ', ',
+                    link('open in Gmail', gmail), ' or ', link('open in your email app', mailto), ' instead.'
                 ]);
             })
             .then(function () {
