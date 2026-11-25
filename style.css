@@ -548,3 +548,37 @@ footer ul a:hover{color:#fff}
 .tag{white-space:nowrap;font-size:11px;letter-spacing:.04em;padding:5px 11px}
 .pop{white-space:nowrap;font-size:10.5px;padding:4px 10px}
 .card-head{flex-wrap:nowrap}
+
+/* ==== Advanced modern: animated gradient-border special card ==== */
+@property --angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+@keyframes spin-border{to{--angle:360deg}}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+@keyframes float-glow{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-14px,10px) scale(1.12)}}
+.card.special{
+  position:relative;overflow:hidden;isolation:isolate;border:1.5px solid transparent;
+  background:
+    linear-gradient(160deg,#ffffff 0%,#f6f3ff 55%,#fff4ef 100%) padding-box,
+    conic-gradient(from var(--angle),#6d5efc,#c04cfd,#ff7a59,#38bdf8,#6d5efc) border-box;
+  animation:spin-border 6s linear infinite;
+  box-shadow:0 30px 70px -36px rgba(109,94,252,.55),0 0 0 6px rgba(109,94,252,.05);
+}
+.card.special::before{
+  content:'';position:absolute;z-index:-1;top:-70px;right:-70px;width:220px;height:220px;border-radius:50%;
+  background:radial-gradient(circle,rgba(192,76,253,.28),rgba(255,122,89,.14) 55%,transparent 70%);
+  filter:blur(8px);animation:float-glow 8s ease-in-out infinite;
+}
+.card.special::after{
+  content:'';position:absolute;z-index:-1;bottom:-80px;left:-60px;width:200px;height:200px;border-radius:50%;
+  background:radial-gradient(circle,rgba(56,189,248,.22),transparent 70%);filter:blur(10px);
+}
+.card.special:hover{transform:translateY(-6px);box-shadow:0 40px 80px -34px rgba(192,76,253,.6),0 0 0 6px rgba(109,94,252,.08)}
+.card.special .pop{
+  background:linear-gradient(110deg,#ff7a59 20%,#ffd08a 40%,#ff5e7e 60%,#ff7a59 80%);background-size:200% 100%;
+  animation:shimmer 3.2s linear infinite;color:#fff;box-shadow:0 8px 20px -8px rgba(255,94,126,.7)
+}
+.card.special .price .amount{background:linear-gradient(120deg,#0b0b12 30%,#6d5efc 70%,#c04cfd);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.card.special .tag{background:rgba(109,94,252,.12);color:#4b3fd1}
+.card.special .btn-outline{background:#0b0b12;color:#fff;border-color:#0b0b12}
+.card.special .btn-outline:hover{background:#1c1c2b}
+.card.special .features li i.fa-circle{color:#c04cfd}
+@media (prefers-reduced-motion:reduce){.card.special,.card.special::before,.card.special .pop{animation:none!important}}
