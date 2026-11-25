@@ -3,1171 +3,1070 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ValidLeads — Premium B2B Lead Intelligence & Growth Platform</title>
-    
-    <!-- Meta Tags for SEO and Social Preview -->
-    <meta name="description" content="Verified Prospect Lists, Custom Data Scraping, Clay Enrichment & Premium LinkedIn Accounts. High accuracy & fast delivery.">
-    <meta property="og:title" content="ValidLeads — B2B Lead Generation & Growth Services">
-    <meta property="og:description" content="Verified B2B Prospect Lists, Clay Multi-Contact Enrichment, Direct Dials, & LinkedIn Sales Navigator Solutions.">
+    <title>ValidLeads — Verified B2B Leads &amp; Data Enrichment Services</title>
+    <meta name="description" content="Verified B2B prospect lists, Apollo and Sales Navigator exports, Clay enrichment and LinkedIn subscriptions for sales teams and agencies in the USA, UK, Canada, India and Australia.">
+    <meta name="theme-color" content="#0a1630">
+    <link rel="canonical" href="https://mehedi4upwork.github.io/lead-services/">
+
+    <!-- Social preview -->
+    <meta property="og:title" content="ValidLeads — Verified B2B Leads &amp; Data Enrichment Services">
+    <meta property="og:description" content="Verified prospect lists, direct dials, Clay enrichment and LinkedIn Sales Navigator solutions with fast delivery.">
     <meta property="og:type" content="website">
-    
-    <!-- Google Fonts & FontAwesome Icons -->
+    <meta property="og:url" content="https://mehedi4upwork.github.io/lead-services/">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232563eb'/%3E%3Cstop offset='1' stop-color='%2338bdf8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Cpath d='M18 32l9 9 19-19' fill='none' stroke='%23fff' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <!-- Fonts & icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "ValidLeads",
+        "url": "https://mehedi4upwork.github.io/lead-services/",
+        "description": "Verified B2B lead lists, data scraping, Clay enrichment and LinkedIn subscription services.",
+        "areaServed": ["United States", "United Kingdom", "Canada", "India", "Australia"],
+        "sameAs": [
+            "https://www.linkedin.com/in/mdmehedihasanvalidleads/",
+            "https://www.facebook.com/mdmehedihasanvalidleads/"
+        ]
+    }
+    </script>
 
     <style>
         :root {
-            --bg-dark: #07090e;
-            --bg-card: rgba(15, 23, 42, 0.65);
-            --bg-card-hover: rgba(30, 41, 59, 0.85);
-            --border-glow: rgba(59, 130, 246, 0.2);
-            --border-highlight: rgba(59, 130, 246, 0.5);
-            --primary: #3b82f6;
-            --primary-glow: #2563eb;
-            --accent-cyan: #06b6d4;
-            --accent-green: #10b981;
-            --text-heading: #f8fafc;
-            --text-body: #94a3b8;
-            --text-muted: #64748b;
-            --radius-xl: 24px;
-            --radius-lg: 16px;
-            --radius-md: 12px;
-            --glass-backdrop: blur(16px);
+            --navy: #0a1630;
+            --navy-2: #12254f;
+            --blue: #2563eb;
+            --blue-dark: #1d4ed8;
+            --sky: #38bdf8;
+            --green: #16a34a;
+            --green-soft: #e8f6ee;
+            --red: #b42318;
+            --red-soft: #fdecea;
+            --wa: #25d366;
+            --wa-dark: #128c4a;
+            --bg: #f5f7fb;
+            --card: #ffffff;
+            --line: #e3e8f2;
+            --ink: #0f1b33;
+            --body: #3d4b66;
+            --muted: #5b6b88;
+            --radius: 18px;
+            --radius-sm: 12px;
+            --shadow: 0 1px 2px rgba(15, 27, 51, 0.04), 0 8px 24px rgba(15, 27, 51, 0.06);
+            --shadow-lg: 0 2px 4px rgba(15, 27, 51, 0.05), 0 18px 40px rgba(15, 27, 51, 0.12);
+            --font-head: 'Manrope', 'Inter', system-ui, sans-serif;
+            --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            scroll-behavior: smooth;
-        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; scroll-padding-top: 84px; }
 
         body {
-            background-color: var(--bg-dark);
-            color: var(--text-body);
-            line-height: 1.6;
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--body);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
-            position: relative;
         }
 
-        /* Animated Mesh Background Overlay */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: 
-                radial-gradient(circle at 15% 20%, rgba(37, 99, 235, 0.15) 0%, transparent 45%),
-                radial-gradient(circle at 85% 60%, rgba(6, 182, 212, 0.12) 0%, transparent 40%),
-                radial-gradient(circle at 50% 85%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
-            z-index: -2;
-            pointer-events: none;
+        button { font-family: inherit; }
+        a { color: inherit; }
+        img, svg { max-width: 100%; }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-head);
+            color: var(--ink);
+            line-height: 1.2;
         }
 
-        /* Subtle Grid Pattern Overlay */
-        body::after {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-            background-size: 50px 50px;
-            z-index: -1;
-            pointer-events: none;
-            opacity: 0.6;
+        a:focus-visible, button:focus-visible, summary:focus-visible {
+            outline: 3px solid #93c5fd;
+            outline-offset: 3px;
+            border-radius: 8px;
         }
 
-        /* Top Bar Announcement */
-        .announcement-bar {
-            background: linear-gradient(90deg, rgba(15, 23, 42, 0.9), rgba(30, 58, 138, 0.8), rgba(15, 23, 42, 0.9));
-            color: #cbd5e1;
-            font-size: 13px;
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        .skip-link {
+            position: absolute; left: -9999px; top: 8px;
+            background: var(--blue); color: #fff;
+            padding: 10px 18px; border-radius: 8px;
+            z-index: 3000; text-decoration: none; font-weight: 600;
+        }
+        .skip-link:focus { left: 12px; }
+
+        /* ---------- Announcement ---------- */
+        .announcement {
+            background: var(--navy);
+            color: #c7d3ee;
+            font-size: 13.5px;
+            text-align: center;
             padding: 9px 20px;
-            text-align: center;
-            font-weight: 500;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            letter-spacing: 0.3px;
         }
+        .announcement strong { color: #fff; }
+        .announcement i { color: var(--sky); margin-right: 6px; }
 
-        .announcement-bar span {
-            color: #38bdf8;
-            font-weight: 700;
+        /* ---------- Navigation ---------- */
+        .site-nav {
+            position: sticky; top: 0; z-index: 1000;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--line);
         }
-
-        /* Navigation Header */
-        nav {
-            position: sticky;
-            top: 0;
-            background: rgba(7, 9, 14, 0.75);
-            backdrop-filter: var(--glass-backdrop);
-            -webkit-backdrop-filter: var(--glass-backdrop);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            z-index: 1000;
-            padding: 16px 24px;
+        .nav-inner {
+            display: flex; align-items: center; justify-content: space-between;
+            gap: 24px; height: 70px;
         }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        /* Logo Brand Container */
-        .brand-logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        .brand {
+            display: flex; align-items: center; gap: 10px;
             text-decoration: none;
+            font-family: var(--font-head);
+            font-weight: 800; font-size: 22px; color: var(--ink);
+            letter-spacing: -0.4px;
+        }
+        .brand-mark {
+            width: 36px; height: 36px; border-radius: 10px;
+            background: linear-gradient(135deg, var(--blue), var(--sky));
+            color: #fff; display: grid; place-items: center; font-size: 16px;
+        }
+        .brand span.accent { color: var(--blue); }
+
+        .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+        .nav-links a {
+            text-decoration: none; font-size: 14.5px; font-weight: 500;
+            color: var(--body); transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--blue); }
+
+        .nav-actions { display: flex; align-items: center; gap: 12px; }
+
+        .menu-toggle {
+            display: none;
+            background: none; border: 1px solid var(--line);
+            width: 42px; height: 42px; border-radius: 10px;
+            font-size: 18px; color: var(--ink); cursor: pointer;
         }
 
-        /* আগের লোগো ইমেজটি লিংক করার জন্য নিচে আপনার ইমেজ পাথ দিতে পারেন */
-        .brand-logo img {
-            max-height: 38px;
-            width: auto;
-            object-fit: contain;
+        /* ---------- Buttons ---------- */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            gap: 9px; padding: 13px 22px;
+            border-radius: 12px; border: 1px solid transparent;
+            font-size: 14.5px; font-weight: 600; text-decoration: none;
+            cursor: pointer; transition: transform 0.2s, box-shadow 0.2s, background 0.2s, border-color 0.2s;
+            line-height: 1.2;
         }
+        .btn:hover { transform: translateY(-2px); }
+        .btn-sm { padding: 10px 18px; font-size: 14px; }
+        .btn-primary { background: var(--blue); color: #fff; box-shadow: 0 6px 16px rgba(37, 99, 235, 0.28); }
+        .btn-primary:hover { background: var(--blue-dark); }
+        .btn-wa { background: var(--wa-dark); color: #fff; box-shadow: 0 6px 16px rgba(18, 140, 74, 0.25); }
+        .btn-wa:hover { background: #0f7a40; }
+        .btn-outline { background: #fff; color: var(--ink); border-color: var(--line); }
+        .btn-outline:hover { border-color: var(--blue); color: var(--blue); }
+        .btn-ghost-light { background: rgba(255, 255, 255, 0.08); color: #fff; border-color: rgba(255, 255, 255, 0.22); }
+        .btn-ghost-light:hover { background: rgba(255, 255, 255, 0.16); }
 
-        .brand-logo-text {
-            font-family: 'Outfit', sans-serif;
-            font-weight: 800;
-            font-size: 24px;
-            color: var(--text-heading);
-            letter-spacing: -0.5px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .brand-logo-icon {
-            width: 36px;
-            height: 36px;
-            background: linear-gradient(135deg, var(--primary), var(--accent-cyan));
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ffffff;
-            font-size: 18px;
-            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
-        }
-
-        .status-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(16, 185, 129, 0.1);
-            color: #34d399;
-            padding: 6px 16px;
-            border-radius: 50px;
-            font-size: 13px;
-            font-weight: 600;
-            border: 1px solid rgba(16, 185, 129, 0.3);
-        }
-
-        .pulse-dot {
-            width: 8px;
-            height: 8px;
-            background-color: #10b981;
-            border-radius: 50%;
-            box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-            animation: pulse 1.8s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
-        }
-
-        /* Hero Section */
-        header.hero {
-            padding: 85px 24px 50px;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
+        /* ---------- Hero ---------- */
+        .hero {
+            background:
+                radial-gradient(900px 420px at 85% -10%, rgba(56, 189, 248, 0.22), transparent 60%),
+                radial-gradient(700px 400px at 0% 100%, rgba(37, 99, 235, 0.25), transparent 60%),
+                linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+            color: #c7d3ee;
+            padding: 84px 0 120px;
             position: relative;
+            overflow: hidden;
         }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(59, 130, 246, 0.1);
-            color: #60a5fa;
-            font-weight: 700;
-            font-size: 13px;
-            padding: 8px 18px;
-            border-radius: 30px;
-            margin-bottom: 24px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border: 1px solid rgba(59, 130, 246, 0.3);
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+        .hero::before {
+            content: ''; position: absolute; inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+            background-size: 56px 56px;
+            mask-image: linear-gradient(180deg, #000 30%, transparent 100%);
+            -webkit-mask-image: linear-gradient(180deg, #000 30%, transparent 100%);
+            pointer-events: none;
         }
-
-        header.hero h1 {
-            font-family: 'Outfit', sans-serif;
-            font-size: 52px;
-            font-weight: 800;
-            line-height: 1.15;
-            color: var(--text-heading);
-            max-width: 900px;
-            margin: 0 auto 24px;
-            letter-spacing: -1.5px;
+        .hero-grid {
+            position: relative;
+            display: grid; grid-template-columns: 1.15fr 0.85fr;
+            gap: 56px; align-items: center;
         }
-
-        header.hero h1 span {
-            background: linear-gradient(135deg, #60a5fa 0%, #38bdf8 50%, #34d399 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .eyebrow {
+            display: inline-flex; align-items: center; gap: 8px;
+            font-size: 12.5px; font-weight: 700; letter-spacing: 0.9px; text-transform: uppercase;
+            color: #bfe3fb; background: rgba(56, 189, 248, 0.12);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 7px 14px; border-radius: 999px; margin-bottom: 22px;
         }
-
-        header.hero p {
-            font-size: 19px;
-            color: var(--text-body);
-            max-width: 720px;
-            margin: 0 auto 40px;
-            font-weight: 400;
+        .hero h1 {
+            color: #fff; font-size: 52px; font-weight: 800; letter-spacing: -1.4px;
+            margin-bottom: 20px;
         }
-
-        /* Stats Bar Glassmorphism */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            max-width: 1000px;
-            margin: 0 auto 60px;
-            background: rgba(15, 23, 42, 0.7);
-            backdrop-filter: var(--glass-backdrop);
-            padding: 28px 24px;
-            border-radius: var(--radius-xl);
-            border: 1px solid var(--border-glow);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        .hero h1 .grad {
+            background: linear-gradient(120deg, #7dd3fc, #38bdf8 45%, #86efac);
+            -webkit-background-clip: text; background-clip: text;
+            -webkit-text-fill-color: transparent; color: transparent;
         }
+        .hero p.lead { font-size: 18px; max-width: 560px; margin-bottom: 30px; color: #c7d3ee; }
+        .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 28px; }
+        .hero-points { display: flex; flex-wrap: wrap; gap: 10px 24px; list-style: none; font-size: 14px; color: #dbe5fa; }
+        .hero-points li i { color: #86efac; margin-right: 8px; }
 
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-family: 'Outfit', sans-serif;
-            font-size: 32px;
-            font-weight: 800;
-            background: linear-gradient(135deg, #ffffff, #93c5fd);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 13px;
-            color: var(--text-muted);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-top: 4px;
-        }
-
-        /* Tab Navigation Filters */
-        .filter-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 48px;
-            flex-wrap: wrap;
-            padding: 0 20px;
-        }
-
-        .tab-btn {
-            background: rgba(15, 23, 42, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 12px 26px;
-            border-radius: 40px;
-            font-weight: 600;
-            font-size: 14px;
-            color: var(--text-body);
-            cursor: pointer;
-            transition: all 0.3s ease;
+        .hero-card {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 22px; padding: 30px;
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
+        .hero-card h2 { color: #fff; font-size: 19px; margin-bottom: 18px; }
+        .hero-card ul { list-style: none; display: grid; gap: 14px; }
+        .hero-card li { display: flex; gap: 14px; align-items: flex-start; color: #dbe5fa; font-size: 14.5px; }
+        .hero-card li .ic {
+            flex: 0 0 36px; height: 36px; border-radius: 10px;
+            background: rgba(56, 189, 248, 0.16); color: #7dd3fc;
+            display: grid; place-items: center; font-size: 15px;
+        }
+        .hero-card li strong { display: block; color: #fff; font-size: 15px; }
 
-        .tab-btn:hover, .tab-btn.active {
-            background: linear-gradient(135deg, var(--primary), var(--primary-glow));
-            color: #ffffff;
-            border-color: var(--primary);
-            box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
-            transform: translateY(-2px);
+        /* ---------- Stats ---------- */
+        .stats-wrap { margin-top: -62px; position: relative; z-index: 2; }
+        .stats {
+            background: var(--card); border: 1px solid var(--line);
+            border-radius: 20px; box-shadow: var(--shadow-lg);
+            display: grid; grid-template-columns: repeat(4, 1fr);
         }
+        .stat { padding: 26px 20px; text-align: center; border-right: 1px solid var(--line); }
+        .stat:last-child { border-right: none; }
+        .stat-num { font-family: var(--font-head); font-size: 34px; font-weight: 800; color: var(--blue); line-height: 1.1; }
+        .stat-label { font-size: 13.5px; color: var(--muted); margin-top: 6px; font-weight: 500; }
 
-        /* Services Grid */
-        .services-container {
-            max-width: 1240px;
-            margin: 0 auto;
-            padding: 0 24px 90px;
+        /* ---------- Markets ---------- */
+        .markets { padding: 44px 0 8px; text-align: center; }
+        .markets p { font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
+        .market-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; list-style: none; }
+        .market-list li {
+            display: inline-flex; align-items: center; gap: 9px;
+            background: #fff; border: 1px solid var(--line);
+            padding: 10px 20px; border-radius: 999px;
+            font-weight: 600; font-size: 14.5px; color: var(--ink);
+            box-shadow: 0 1px 2px rgba(15, 27, 51, 0.04);
         }
+        .market-list li i { color: var(--blue); }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 32px;
+        /* ---------- Sections ---------- */
+        .section { padding: 84px 0; }
+        .section.tight { padding-top: 40px; }
+        .section.alt { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+        .section-head { text-align: center; max-width: 700px; margin: 0 auto 44px; }
+        .kicker { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--blue); margin-bottom: 10px; }
+        .section-head h2 { font-size: 36px; font-weight: 800; letter-spacing: -0.8px; margin-bottom: 12px; }
+        .section-head p { font-size: 17px; color: var(--muted); }
+
+        /* ---------- Filter ---------- */
+        .filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 36px; }
+        .tab-btn {
+            background: #fff; border: 1px solid var(--line); color: var(--body);
+            padding: 10px 22px; border-radius: 999px; font-size: 14px; font-weight: 600;
+            cursor: pointer; transition: all 0.2s;
         }
+        .tab-btn:hover { border-color: var(--blue); color: var(--blue); }
+        .tab-btn.active { background: var(--navy); border-color: var(--navy); color: #fff; }
+
+        /* ---------- Service cards ---------- */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); gap: 26px; }
 
         .card {
-            background: var(--bg-card);
-            backdrop-filter: var(--glass-backdrop);
-            -webkit-backdrop-filter: var(--glass-backdrop);
-            border: 1px solid var(--border-glow);
-            border-radius: var(--radius-xl);
-            padding: 36px 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
-            overflow: hidden;
+            background: var(--card); border: 1px solid var(--line);
+            border-radius: var(--radius); padding: 30px 28px 28px;
+            display: flex; flex-direction: column;
+            box-shadow: var(--shadow); position: relative;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: #c9d6f2; }
+        .card.featured { border: 2px solid var(--blue); }
+        .ribbon {
+            position: absolute; top: -13px; left: 28px;
+            background: var(--blue); color: #fff;
+            font-size: 11.5px; font-weight: 700; letter-spacing: 0.7px; text-transform: uppercase;
+            padding: 5px 14px; border-radius: 999px;
+            box-shadow: 0 6px 14px rgba(37, 99, 235, 0.35);
+        }
+        .chip {
+            align-self: flex-start;
+            display: inline-flex; align-items: center; gap: 7px;
+            font-size: 12px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;
+            color: var(--blue); background: #eaf1ff;
+            padding: 6px 12px; border-radius: 8px; margin-bottom: 16px;
+        }
+        .card h3 { font-size: 21px; font-weight: 700; margin-bottom: 14px; letter-spacing: -0.3px; }
+        .price { display: flex; align-items: baseline; gap: 8px; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+        .price .amount { font-family: var(--font-head); font-size: 40px; font-weight: 800; color: var(--ink); letter-spacing: -1px; line-height: 1; }
+        .price .amount.sm { font-size: 24px; letter-spacing: -0.4px; }
+        .price .per { font-size: 13.5px; color: var(--muted); font-weight: 500; }
+        .features { list-style: none; margin-bottom: 26px; display: grid; gap: 11px; }
+        .features li { display: flex; gap: 11px; font-size: 14.5px; color: var(--body); }
+        .features li i { color: var(--green); margin-top: 5px; font-size: 13px; }
+        .card-actions { margin-top: auto; display: grid; gap: 10px; }
+        .policy-note { margin-top: 14px; font-size: 12.5px; color: var(--muted); display: flex; gap: 8px; align-items: flex-start; }
+        .policy-note i { margin-top: 4px; }
+        .policy-note.no-refund i { color: var(--red); }
+        .policy-note.refund i { color: var(--green); }
+        .policy-note a { color: var(--blue); font-weight: 600; text-decoration: none; }
+        .policy-note a:hover { text-decoration: underline; }
+
+        /* ---------- Why us ---------- */
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 24px; }
+        .feature {
+            background: var(--bg); border: 1px solid var(--line);
+            border-radius: var(--radius); padding: 28px;
+        }
+        .feature .ic {
+            width: 50px; height: 50px; border-radius: 14px; margin-bottom: 18px;
+            background: linear-gradient(135deg, var(--blue), var(--sky));
+            color: #fff; display: grid; place-items: center; font-size: 20px;
+        }
+        .feature h3 { font-size: 18px; margin-bottom: 8px; }
+        .feature p { font-size: 14.5px; }
+
+        /* ---------- Steps ---------- */
+        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 24px; counter-reset: step; }
+        .step { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 30px 26px; text-align: center; box-shadow: var(--shadow); }
+        .step-num {
+            width: 46px; height: 46px; margin: 0 auto 18px; border-radius: 50%;
+            display: grid; place-items: center;
+            background: var(--navy); color: #fff;
+            font-family: var(--font-head); font-weight: 800; font-size: 19px;
+        }
+        .step h3 { font-size: 19px; margin-bottom: 8px; }
+        .step p { font-size: 14.5px; }
+
+        /* ---------- Payments ---------- */
+        .pay-wrap { max-width: 900px; margin: 0 auto; background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 44px 36px; box-shadow: var(--shadow); text-align: center; }
+        .pay-list { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; margin: 28px 0; list-style: none; }
+        .pay-list li {
+            display: flex; align-items: center; gap: 12px;
+            padding: 16px 28px; border: 1px solid var(--line); border-radius: 14px;
+            background: var(--bg); font-weight: 700; color: var(--ink); font-size: 16px;
+        }
+        .pay-list li i { font-size: 20px; color: var(--blue); }
+        .note {
+            background: #fff8e6; border: 1px solid #f6dd9a; color: #7a5600;
+            padding: 14px 20px; border-radius: 12px; font-size: 14px; display: inline-block;
+        }
+        .note i { margin-right: 6px; }
+
+        /* ---------- Refund policy ---------- */
+        .policy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 26px; max-width: 960px; margin: 0 auto; }
+        .policy-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow); border-top-width: 4px; }
+        .policy-card.no { border-top-color: var(--red); }
+        .policy-card.yes { border-top-color: var(--green); }
+        .badge { display: inline-flex; align-items: center; gap: 8px; font-size: 12.5px; font-weight: 700; padding: 6px 14px; border-radius: 999px; margin-bottom: 16px; }
+        .badge.no { background: var(--red-soft); color: var(--red); }
+        .badge.yes { background: var(--green-soft); color: #0f6a33; }
+        .policy-card h3 { font-size: 21px; margin-bottom: 10px; }
+        .policy-card p { font-size: 15px; margin-bottom: 14px; }
+        .policy-card ul { list-style: none; display: grid; gap: 9px; font-size: 14.5px; }
+        .policy-card ul li { display: flex; gap: 10px; }
+        .policy-card.no ul li i { color: var(--red); margin-top: 5px; font-size: 13px; }
+        .policy-card.yes ul li i { color: var(--green); margin-top: 5px; font-size: 13px; }
+        .policy-foot { max-width: 960px; margin: 26px auto 0; text-align: center; font-size: 14.5px; color: var(--muted); }
+        .policy-foot a { color: var(--blue); font-weight: 600; text-decoration: none; }
+        .policy-foot a:hover { text-decoration: underline; }
+
+        /* ---------- Testimonials ---------- */
+        .quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 26px; max-width: 960px; margin: 0 auto; }
+        .quote { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow); }
+        .stars { color: #f5a524; font-size: 14px; margin-bottom: 14px; letter-spacing: 2px; }
+        .quote p { font-size: 16px; color: var(--ink); margin-bottom: 22px; }
+        .who { display: flex; align-items: center; gap: 14px; }
+        .avatar {
+            width: 46px; height: 46px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--blue), var(--sky));
+            color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 15px;
+        }
+        .who strong { display: block; color: var(--ink); font-size: 15px; }
+        .who span { font-size: 13px; color: var(--muted); }
+
+        /* ---------- FAQ ---------- */
+        .faq { max-width: 820px; margin: 0 auto; display: grid; gap: 14px; }
+        .faq details { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-sm); transition: border-color 0.2s, box-shadow 0.2s; }
+        .faq details[open] { border-color: #bcd0fb; box-shadow: var(--shadow); }
+        .faq summary {
+            list-style: none; cursor: pointer;
+            padding: 20px 24px; font-weight: 600; font-size: 16.5px; color: var(--ink);
+            display: flex; justify-content: space-between; align-items: center; gap: 16px;
+        }
+        .faq summary::-webkit-details-marker { display: none; }
+        .faq summary i { color: var(--muted); transition: transform 0.25s; font-size: 13px; }
+        .faq details[open] summary i { transform: rotate(180deg); color: var(--blue); }
+        .faq .answer { padding: 0 24px 22px; font-size: 15px; }
+        .faq .answer a { color: var(--blue); font-weight: 600; }
+
+        /* ---------- CTA ---------- */
+        .cta {
+            background: linear-gradient(135deg, var(--navy) 0%, #17346f 100%);
+            border-radius: 28px; padding: 64px 32px; text-align: center; color: #c7d3ee;
+            position: relative; overflow: hidden;
+        }
+        .cta::after {
+            content: ''; position: absolute; width: 420px; height: 420px; right: -120px; top: -160px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.28), transparent 65%);
+            pointer-events: none;
+        }
+        .cta h2 { color: #fff; font-size: 38px; font-weight: 800; letter-spacing: -0.8px; margin-bottom: 14px; position: relative; }
+        .cta p { max-width: 580px; margin: 0 auto 32px; font-size: 17px; position: relative; }
+        .cta-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; position: relative; }
+
+        /* ---------- Footer ---------- */
+        footer { background: var(--navy); color: #aab8d6; margin-top: 90px; }
+        .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; padding: 60px 0 40px; }
+        footer .brand { color: #fff; margin-bottom: 14px; }
+        footer .brand span.accent { color: var(--sky); }
+        footer p { font-size: 14.5px; max-width: 360px; }
+        footer h4 { color: #fff; font-size: 15px; margin-bottom: 16px; }
+        footer ul { list-style: none; display: grid; gap: 10px; font-size: 14.5px; }
+        footer a { text-decoration: none; transition: color 0.2s; }
+        footer a:hover { color: #fff; }
+        .foot-social { display: flex; gap: 12px; margin-top: 18px; }
+        .foot-social a {
+            width: 40px; height: 40px; border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            display: grid; place-items: center; color: #dbe5fa;
+        }
+        .foot-social a:hover { background: var(--blue); border-color: var(--blue); }
+        .legal { border-top: 1px solid rgba(255, 255, 255, 0.1); padding: 24px 0 34px; font-size: 13px; color: #8d9cc0; }
+        .legal p { max-width: none; margin-bottom: 8px; }
+
+        /* ---------- Floating WhatsApp ---------- */
+        .floating-wa {
+            position: fixed; right: 24px; bottom: 24px; z-index: 999;
+            width: 60px; height: 60px; border-radius: 50%;
+            background: var(--wa); color: #fff; font-size: 30px;
+            display: grid; place-items: center; text-decoration: none;
+            box-shadow: 0 10px 28px rgba(37, 211, 102, 0.45);
+            transition: transform 0.2s;
+        }
+        .floating-wa:hover { transform: scale(1.08); }
+
+        /* ---------- Reveal ---------- */
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+        .js .reveal:not(.in) { opacity: 0; }
+        .js .reveal.in { animation: fadeUp 0.6s ease backwards; }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 960px) {
+            .hero { padding: 64px 0 110px; }
+            .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+            .hero h1 { font-size: 42px; }
+            .stats { grid-template-columns: repeat(2, 1fr); }
+            .stat:nth-child(2) { border-right: none; }
+            .stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+            .foot-grid { grid-template-columns: 1fr 1fr; }
+            .foot-grid > div:first-child { grid-column: 1 / -1; }
         }
 
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--primary), transparent);
-            opacity: 0;
-            transition: opacity 0.35s ease;
+        @media (max-width: 860px) {
+            .menu-toggle { display: inline-grid; place-items: center; }
+            .nav-actions .btn { display: none; }
+            .nav-links {
+                display: none; position: absolute; left: 0; right: 0; top: 70px;
+                flex-direction: column; align-items: stretch; gap: 0;
+                background: #fff; border-bottom: 1px solid var(--line);
+                box-shadow: 0 16px 30px rgba(15, 27, 51, 0.1);
+                padding: 8px 24px 16px;
+            }
+            .nav-links.open { display: flex; }
+            .nav-links li a { display: block; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 16px; }
+            .nav-links li:last-child a { border-bottom: none; }
         }
 
-        .card:hover {
-            transform: translateY(-8px);
-            background: var(--bg-card-hover);
-            border-color: var(--border-highlight);
-            box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.25);
+        @media (max-width: 600px) {
+            .container { padding: 0 18px; }
+            .hero h1 { font-size: 34px; letter-spacing: -0.8px; }
+            .hero p.lead { font-size: 16px; }
+            .section { padding: 60px 0; }
+            .section-head h2 { font-size: 28px; }
+            .cta { padding: 44px 22px; border-radius: 22px; }
+            .cta h2 { font-size: 28px; }
+            .pay-wrap { padding: 32px 20px; }
+            .stat { padding: 20px 12px; }
+            .stat-num { font-size: 28px; }
+            .foot-grid { grid-template-columns: 1fr; }
+            .floating-wa { width: 54px; height: 54px; font-size: 27px; right: 16px; bottom: 16px; }
+            .hero-cta .btn { width: 100%; }
         }
 
-        .card:hover::before {
-            opacity: 1;
-        }
-
-        .card.featured {
-            border: 2px solid var(--primary);
-            background: rgba(15, 23, 42, 0.85);
-            box-shadow: 0 0 30px rgba(37, 99, 235, 0.2);
-        }
-
-        .featured-tag {
-            position: absolute;
-            top: 18px;
-            right: 20px;
-            background: linear-gradient(135deg, #2563eb, #06b6d4);
-            color: #ffffff;
-            font-size: 11px;
-            font-weight: 800;
-            text-transform: uppercase;
-            padding: 5px 14px;
-            border-radius: 20px;
-            letter-spacing: 0.8px;
-            box-shadow: 0 0 12px rgba(6, 182, 212, 0.4);
-        }
-
-        .badge-category {
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #60a5fa;
-            background: rgba(59, 130, 246, 0.12);
-            padding: 6px 12px;
-            border-radius: 8px;
-            display: inline-block;
-            margin-bottom: 16px;
-            border: 1px solid rgba(59, 130, 246, 0.2);
-        }
-
-        .card h3 {
-            font-family: 'Outfit', sans-serif;
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--text-heading);
-            margin-bottom: 20px;
-            line-height: 1.3;
-        }
-
-        .features-list {
-            list-style: none;
-            margin-bottom: 32px;
-        }
-
-        .features-list li {
-            font-size: 14px;
-            color: #cbd5e1;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .features-list li i {
-            color: var(--accent-green);
-            font-size: 15px;
-            background: rgba(16, 185, 129, 0.15);
-            padding: 4px;
-            border-radius: 50%;
-        }
-
-        .price-box {
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding-top: 24px;
-            margin-top: auto;
-        }
-
-        .price-amount {
-            font-family: 'Outfit', sans-serif;
-            font-size: 36px;
-            font-weight: 800;
-            color: var(--text-heading);
-        }
-
-        .price-period {
-            font-size: 13px;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-
-        .btn-group {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-top: 20px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 14px 22px;
-            border-radius: var(--radius-md);
-            font-size: 14px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.25s ease;
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #10b981, #059669);
-            color: #ffffff;
-            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
-        }
-
-        .btn-primary:hover {
-            background: linear-gradient(135deg, #059669, #047857);
-            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.05);
-            color: #e2e8f0;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            color: #ffffff;
-            border-color: rgba(255, 255, 255, 0.25);
-        }
-
-        /* Payment & Trust Section */
-        .section-box {
-            background: rgba(15, 23, 42, 0.65);
-            backdrop-filter: var(--glass-backdrop);
-            border-radius: var(--radius-xl);
-            border: 1px solid var(--border-glow);
-            padding: 48px;
-            max-width: 1240px;
-            margin: 0 auto 90px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 36px;
-        }
-
-        .section-header h2 {
-            font-family: 'Outfit', sans-serif;
-            font-size: 32px;
-            font-weight: 800;
-            color: var(--text-heading);
-            margin-bottom: 8px;
-        }
-
-        .section-header p {
-            color: var(--text-body);
-            font-size: 16px;
-        }
-
-        .payment-methods {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            flex-wrap: wrap;
-            margin: 30px 0;
-        }
-
-        .payment-card {
-            background: rgba(30, 41, 59, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 18px 32px;
-            border-radius: var(--radius-lg);
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            font-weight: 700;
-            color: var(--text-heading);
-            font-size: 17px;
-            transition: all 0.3s ease;
-        }
-
-        .payment-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-3px);
-            background: rgba(30, 41, 59, 0.9);
-        }
-
-        .note-box {
-            background: rgba(234, 179, 8, 0.1);
-            border: 1px solid rgba(234, 179, 8, 0.25);
-            color: #fde047;
-            padding: 16px 24px;
-            border-radius: var(--radius-md);
-            font-size: 14px;
-            text-align: center;
-            margin-top: 24px;
-        }
-
-        /* Testimonials Section */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 24px;
-            margin-top: 30px;
-        }
-
-        .testimonial-card {
-            background: rgba(30, 41, 59, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 28px;
-            border-radius: var(--radius-lg);
-            position: relative;
-        }
-
-        .testimonial-card p {
-            font-style: italic;
-            color: #cbd5e1;
-            font-size: 15px;
-            margin-bottom: 20px;
-        }
-
-        .client-info {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .client-avatar {
-            width: 44px;
-            height: 44px;
-            background: linear-gradient(135deg, var(--primary), var(--accent-cyan));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-        }
-
-        .client-details h4 {
-            color: var(--text-heading);
-            font-size: 15px;
-            font-weight: 700;
-        }
-
-        .client-details span {
-            color: var(--text-muted);
-            font-size: 12px;
-        }
-
-        .rating-stars {
-            color: #f59e0b;
-            font-size: 13px;
-            margin-bottom: 12px;
-        }
-
-        /* FAQ Section */
-        .faq-container {
-            max-width: 850px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background: rgba(30, 41, 59, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: var(--radius-lg);
-            margin-bottom: 16px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .faq-question {
-            padding: 22px 28px;
-            font-weight: 700;
-            font-size: 17px;
-            color: var(--text-heading);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .faq-answer {
-            padding: 0 28px 22px;
-            color: var(--text-body);
-            font-size: 15px;
-            display: none;
-            line-height: 1.7;
-        }
-
-        .faq-item.active {
-            border-color: var(--primary);
-            background: rgba(30, 41, 59, 0.8);
-        }
-
-        .faq-item.active .faq-answer {
-            display: block;
-        }
-
-        .faq-item.active .faq-question i {
-            transform: rotate(180deg);
-            color: var(--primary);
-        }
-
-        /* Contact Section */
-        .contact-box {
-            background: linear-gradient(135deg, rgba(30, 58, 138, 0.8), rgba(15, 23, 42, 0.95));
-            border: 1px solid var(--border-glow);
-            border-radius: var(--radius-xl);
-            padding: 60px 30px;
-            text-align: center;
-            max-width: 1240px;
-            margin: 0 auto 90px;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-        }
-
-        .contact-box h2 {
-            font-family: 'Outfit', sans-serif;
-            font-size: 38px;
-            font-weight: 800;
-            color: var(--text-heading);
-            margin-bottom: 16px;
-        }
-
-        .contact-box p {
-            color: #94a3b8;
-            margin-bottom: 36px;
-            font-size: 18px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 18px;
-            flex-wrap: wrap;
-        }
-
-        .social-btn {
-            background: rgba(255, 255, 255, 0.08);
-            color: #ffffff;
-            padding: 14px 28px;
-            border-radius: 40px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 15px;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-        }
-
-        .social-btn:hover {
-            background: var(--primary);
-            border-color: var(--primary);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
-        }
-
-        /* Floating WhatsApp Button */
-        .floating-whatsapp {
-            position: fixed;
-            bottom: 28px;
-            right: 28px;
-            background: linear-gradient(135deg, #25d366, #128c7e);
-            color: white;
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
-            z-index: 999;
-            text-decoration: none;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .floating-whatsapp:hover {
-            transform: scale(1.12);
-            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.7);
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 36px 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            color: var(--text-muted);
-            font-size: 14px;
-        }
-
-        @media (max-width: 768px) {
-            header.hero h1 { font-size: 34px; }
-            header.hero p { font-size: 16px; }
-            .grid { grid-template-columns: 1fr; }
-            .section-box { padding: 28px 20px; }
-            .contact-box { padding: 40px 20px; }
-            .contact-box h2 { font-size: 28px; }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { animation: none !important; transition: none !important; }
+            .js .reveal:not(.in) { opacity: 1; }
         }
     </style>
 </head>
-<body>
+<body id="top">
+    <a href="#services" class="skip-link">Skip to services</a>
 
-    <!-- Top Announcement -->
-    <div class="announcement-bar">
-        ⚡ <span>Exclusive Deal:</span> Custom Bulk Discounts Available for Enterprise Volume Lead Requests!
+    <div class="announcement">
+        <i class="fa-solid fa-bolt" aria-hidden="true"></i><strong>Bulk orders?</strong> Custom discounts are available for enterprise-volume lead requests.
     </div>
 
-    <!-- Navigation Header -->
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="brand-logo">
-                <!-- আপনার মূল লোগোর ইমেজ ফাইল থাকলে <img src="logo.png" alt="ValidLeads Logo"> এভাবে ব্যবহার করতে পারেন -->
-                <div class="brand-logo-icon">
-                    <i class="fa-solid fa-bolt"></i>
-                </div>
-                <div class="brand-logo-text">
-                    ValidLeads
-                </div>
+    <!-- Navigation -->
+    <nav class="site-nav" aria-label="Main navigation">
+        <div class="container nav-inner">
+            <a href="#top" class="brand" aria-label="ValidLeads home">
+                <span class="brand-mark"><i class="fa-solid fa-check" aria-hidden="true"></i></span>
+                <span>Valid<span class="accent">Leads</span></span>
             </a>
-            
-            <div class="status-badge">
-                <span class="pulse-dot"></span> Ready for Orders
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#process">How It Works</a></li>
+                <li><a href="#refund-policy">Refund Policy</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a class="btn btn-wa btn-sm" href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20have%20a%20question%20about%20your%20services" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Chat on WhatsApp</a>
+                <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-badge">
-            <i class="fa-solid fa-shield-halved"></i> Premium B2B Lead Intelligence
-        </div>
-        <h1>High-Accuracy B2B Leads & <span>Automated Data Enrichment</span></h1>
-        <p>Targeted Prospect Lists, Custom Data Scraping, Clay Multi-Contact Enrichment & LinkedIn Sales Navigator Solutions for Fast Revenue Growth.</p>
-        
-        <!-- Key Stats Bar -->
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number">98%+</span>
-                <span class="stat-label">Verified Email Accuracy</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">10M+</span>
-                <span class="stat-label">Leads Processed</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">0%</span>
-                <span class="stat-label">Bounce Rate Guarantee</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">24/7</span>
-                <span class="stat-label">Instant Turnaround</span>
-            </div>
-        </div>
-    </header>
-
-    <!-- Category Filter Tabs -->
-    <div class="filter-tabs">
-        <button class="tab-btn active" onclick="filterCategory('all', event)">All Services</button>
-        <button class="tab-btn" onclick="filterCategory('lead-export', event)">Lead Exports</button>
-        <button class="tab-btn" onclick="filterCategory('clay-enrich', event)">Clay Enrichment</button>
-        <button class="tab-btn" onclick="filterCategory('linkedin-plans', event)">LinkedIn Subscriptions</button>
-    </div>
-
-    <!-- Services Cards Grid -->
-    <div class="services-container">
-        <div class="grid" id="services-grid">
-            
-            <!-- Card 1 -->
-            <div class="card" data-category="lead-export">
+    <main>
+        <!-- Hero -->
+        <header class="hero">
+            <div class="container hero-grid">
                 <div>
-                    <span class="badge-category"><i class="fa-solid fa-file-export"></i> Apollo Export</span>
-                    <h3>10K Apollo Business Emails</h3>
-                    <ul class="features-list">
-                        <li><i class="fa-solid fa-check"></i> 10,000 Verified Business Emails</li>
-                        <li><i class="fa-solid fa-check"></i> Direct Export from Apollo Database</li>
-                        <li><i class="fa-solid fa-check"></i> Full Prospect Title, Company & Location</li>
-                        <li><i class="fa-solid fa-check"></i> Fast 24-Hour Express Delivery</li>
+                    <span class="eyebrow"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Verified B2B Data Provider</span>
+                    <h1>Verified B2B Leads &amp; <span class="grad">Data Enrichment</span> for Growing Sales Teams</h1>
+                    <p class="lead">Targeted prospect lists, Apollo and Sales Navigator exports, Clay multi-contact enrichment and LinkedIn subscriptions, delivered fast to agencies and sales teams worldwide.</p>
+                    <div class="hero-cta">
+                        <a href="#services" class="btn btn-primary"><i class="fa-solid fa-table-list" aria-hidden="true"></i> Browse Services</a>
+                        <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20need%20a%20custom%20lead%20list" target="_blank" rel="noopener noreferrer" class="btn btn-ghost-light"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Request a Custom List</a>
+                    </div>
+                    <ul class="hero-points">
+                        <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Free sample sheets</li>
+                        <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>CSV / Excel delivery</li>
+                        <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Wise, PayPal &amp; Payoneer</li>
                     </ul>
                 </div>
-                <div class="price-box">
-                    <div class="price-amount">$35 <span class="price-period">/ One-time</span></div>
-                    <div class="btn-group">
-                        <a href="https://docs.google.com/spreadsheets/d/1Qose_2CksCCKL--RXz_r26WcjTW1NfEo3hcr6yFzFEg/edit?gid=0#gid=0" target="_blank" class="btn btn-secondary"><i class="fa-regular fa-file-excel"></i> Preview Sample Sheet</a>
-                        <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20want%20to%20order%3A%2010K%20Apollo%20Business%20Emails%20(%2435)" target="_blank" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Order via WhatsApp</a>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Card 2 (Featured) -->
-            <div class="card featured" data-category="lead-export">
-                <span class="featured-tag">Most Popular</span>
-                <div>
-                    <span class="badge-category"><i class="fa-solid fa-phone-volume"></i> Direct Dials</span>
-                    <h3>1K Apollo Export + Mobiles</h3>
-                    <ul class="features-list">
-                        <li><i class="fa-solid fa-check"></i> 1,000 Verified Business Emails</li>
-                        <li><i class="fa-solid fa-check"></i> Direct Mobile & Phone Numbers Included</li>
-                        <li><i class="fa-solid fa-check"></i> Optimized for Cold Calling & SMS Outreach</li>
-                        <li><i class="fa-solid fa-check"></i> Ultra-High Connect Rate</li>
+                <aside class="hero-card" aria-label="What you get">
+                    <h2>What you get with every order</h2>
+                    <ul>
+                        <li><span class="ic"><i class="fa-solid fa-envelope-circle-check" aria-hidden="true"></i></span><div><strong>Verified business emails</strong>Checked with real-time validation tools.</div></li>
+                        <li><span class="ic"><i class="fa-solid fa-phone-volume" aria-hidden="true"></i></span><div><strong>Direct dials &amp; mobiles</strong>Available on selected packages.</div></li>
+                        <li><span class="ic"><i class="fa-solid fa-bullseye" aria-hidden="true"></i></span><div><strong>Custom niche targeting</strong>Filter by industry, title and location.</div></li>
+                        <li><span class="ic"><i class="fa-solid fa-clock" aria-hidden="true"></i></span><div><strong>Express delivery</strong>Most exports delivered within 24 hours.</div></li>
                     </ul>
+                </aside>
+            </div>
+        </header>
+
+        <!-- Stats -->
+        <div class="container stats-wrap">
+            <div class="stats reveal">
+                <div class="stat"><div class="stat-num">98%+</div><div class="stat-label">Verified email accuracy</div></div>
+                <div class="stat"><div class="stat-num">10M+</div><div class="stat-label">Leads processed</div></div>
+                <div class="stat"><div class="stat-num">24h</div><div class="stat-label">Express delivery</div></div>
+                <div class="stat"><div class="stat-num">5</div><div class="stat-label">Core client markets</div></div>
+            </div>
+        </div>
+
+        <!-- Target markets -->
+        <section class="markets container" aria-label="Markets we serve">
+            <p>Trusted by clients in</p>
+            <ul class="market-list">
+                <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> United States</li>
+                <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> United Kingdom</li>
+                <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Canada</li>
+                <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> India</li>
+                <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Australia</li>
+            </ul>
+        </section>
+
+        <!-- Services -->
+        <section class="section" id="services">
+            <div class="container">
+                <div class="section-head">
+                    <span class="kicker">Services &amp; Pricing</span>
+                    <h2>Choose the lead package that fits your outreach</h2>
+                    <p>Transparent one-time pricing in USD. Preview a sample sheet before you order.</p>
                 </div>
-                <div class="price-box">
-                    <div class="price-amount">$80 <span class="price-period">/ One-time</span></div>
-                    <div class="btn-group">
-                        <a href="https://docs.google.com/spreadsheets/d/1dx69_n-OTe4rUTmd6L4pI5xnXWf7ERDtQEXid9Db978/edit?gid=0#gid=0" target="_blank" class="btn btn-secondary"><i class="fa-regular fa-file-excel"></i> Preview Sample Sheet</a>
-                        <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20want%20to%20order%3A%201K%20Apollo%20Export%20%2B%20Mobile%20Numbers%20(%2480)" target="_blank" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Order via WhatsApp</a>
+
+                <div class="filters" role="group" aria-label="Filter services by category">
+                    <button type="button" class="tab-btn active" data-filter="all" aria-pressed="true">All Services</button>
+                    <button type="button" class="tab-btn" data-filter="lead-export" aria-pressed="false">Lead Exports</button>
+                    <button type="button" class="tab-btn" data-filter="clay-enrich" aria-pressed="false">Clay Enrichment</button>
+                    <button type="button" class="tab-btn" data-filter="linkedin-plans" aria-pressed="false">LinkedIn Subscriptions</button>
+                </div>
+
+                <div class="grid" id="services-grid">
+
+                    <!-- 1 -->
+                    <article class="card" data-category="lead-export">
+                        <span class="chip"><i class="fa-solid fa-file-export" aria-hidden="true"></i> Apollo Export</span>
+                        <h3>10K Apollo Business Emails</h3>
+                        <div class="price"><span class="amount">$35</span><span class="per">one-time</span></div>
+                        <ul class="features">
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>10,000 verified business emails</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Direct export from the Apollo database</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Prospect title, company and location</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Fast 24-hour express delivery</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a href="https://docs.google.com/spreadsheets/d/1Qose_2CksCCKL--RXz_r26WcjTW1NfEo3hcr6yFzFEg/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fa-regular fa-file-excel" aria-hidden="true"></i> Preview Sample Sheet</a>
+                            <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20want%20to%20order%3A%2010K%20Apollo%20Business%20Emails%20(%2435)" target="_blank" rel="noopener noreferrer" class="btn btn-wa"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Order via WhatsApp</a>
+                        </div>
+                        <p class="policy-note no-refund"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span>Non-refundable. Please review the sample sheet first. <a href="#refund-policy">Refund policy</a></span></p>
+                    </article>
+
+                    <!-- 2 -->
+                    <article class="card featured" data-category="lead-export">
+                        <span class="ribbon">Most Popular</span>
+                        <span class="chip"><i class="fa-solid fa-phone-volume" aria-hidden="true"></i> Direct Dials</span>
+                        <h3>1K Apollo Export + Mobiles</h3>
+                        <div class="price"><span class="amount">$80</span><span class="per">one-time</span></div>
+                        <ul class="features">
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>1,000 verified business emails</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Direct mobile and phone numbers included</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Optimized for cold calling and SMS outreach</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>High connect rate</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a href="https://docs.google.com/spreadsheets/d/1dx69_n-OTe4rUTmd6L4pI5xnXWf7ERDtQEXid9Db978/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fa-regular fa-file-excel" aria-hidden="true"></i> Preview Sample Sheet</a>
+                            <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20want%20to%20order%3A%201K%20Apollo%20Export%20%2B%20Mobile%20Numbers%20(%2480)" target="_blank" rel="noopener noreferrer" class="btn btn-wa"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Order via WhatsApp</a>
+                        </div>
+                        <p class="policy-note no-refund"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span>Non-refundable. Please review the sample sheet first. <a href="#refund-policy">Refund policy</a></span></p>
+                    </article>
+
+                    <!-- 3 -->
+                    <article class="card" data-category="clay-enrich">
+                        <span class="chip"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> Clay Enrichment</span>
+                        <h3>Multi-Contact Enrichment Package</h3>
+                        <div class="price"><span class="amount">$130</span><span class="per">one-time</span></div>
+                        <ul class="features">
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>1,000 verified work emails</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Personal emails (Clay enriched)</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Direct mobile phone numbers</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Multi-step waterfall data search</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a href="https://docs.google.com/spreadsheets/d/16pKBG6ijxTi6SSOAS_hNIGO_yBXvshiRPcra4xQZyto/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fa-regular fa-file-excel" aria-hidden="true"></i> Preview Sample Sheet</a>
+                            <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20want%20to%20order%3A%20Multi-Contact%20Clay%20Enrichment%20Package%20(%24130)" target="_blank" rel="noopener noreferrer" class="btn btn-wa"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Order via WhatsApp</a>
+                        </div>
+                    </article>
+
+                    <!-- 4 -->
+                    <article class="card" data-category="linkedin-plans">
+                        <span class="chip"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn Premium</span>
+                        <h3>LinkedIn Sales Navigator Plan</h3>
+                        <div class="price"><span class="amount">$37</span><span class="per">per month</span></div>
+                        <ul class="features">
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>1 month full access subscription</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Direct activation link to your account</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Only your email needed, never your password</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Advanced lead and account search filters</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20want%20to%20order%3A%20LinkedIn%20Sales%20Navigator%20Plan%20(%2437%2Fmonth)" target="_blank" rel="noopener noreferrer" class="btn btn-wa"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Order via WhatsApp</a>
+                        </div>
+                        <p class="policy-note refund"><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Refunded if a problem occurs with your subscription. <a href="#refund-policy">Refund policy</a></span></p>
+                    </article>
+
+                    <!-- 5 -->
+                    <article class="card" data-category="linkedin-plans">
+                        <span class="chip"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn Career</span>
+                        <h3>LinkedIn Premium Career Plan</h3>
+                        <div class="price"><span class="amount sm">Market rate</span><span class="per">ask for current price</span></div>
+                        <ul class="features">
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>5 InMail credits per month</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>See who viewed your profile</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Top applicant features and insights</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Full LinkedIn Learning access</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20want%20to%20inquire%20about%20the%20current%20price%20for%3A%20LinkedIn%20Premium%20Career" target="_blank" rel="noopener noreferrer" class="btn btn-wa"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Ask Current Price</a>
+                        </div>
+                        <p class="policy-note refund"><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Refunded if a problem occurs with your subscription. <a href="#refund-policy">Refund policy</a></span></p>
+                    </article>
+
+                    <!-- 6 -->
+                    <article class="card" data-category="linkedin-plans">
+                        <span class="chip"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn Business</span>
+                        <h3>LinkedIn Premium Business Plan</h3>
+                        <div class="price"><span class="amount sm">Market rate</span><span class="per">ask for current price</span></div>
+                        <ul class="features">
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>15 InMail credits per month</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Unlimited profile browsing (3rd degree)</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Detailed company growth insights</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Premium search and learning courses</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20want%20to%20inquire%20about%20the%20current%20price%20for%3A%20LinkedIn%20Premium%20Business" target="_blank" rel="noopener noreferrer" class="btn btn-wa"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Ask Current Price</a>
+                        </div>
+                        <p class="policy-note refund"><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Refunded if a problem occurs with your subscription. <a href="#refund-policy">Refund policy</a></span></p>
+                    </article>
+
+                    <!-- 7 -->
+                    <article class="card" data-category="lead-export">
+                        <span class="chip"><i class="fa-solid fa-user-check" aria-hidden="true"></i> Manual Research</span>
+                        <h3>100% Manually Verified Leads</h3>
+                        <div class="price"><span class="amount">$130</span><span class="per">one-time</span></div>
+                        <ul class="features">
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>1,000 targeted B2B contacts</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Hand-curated and double verified</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Ultra-low bounce rate</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Custom niche filters</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a href="https://docs.google.com/spreadsheets/d/1pT8A5swuXjhcjFnATPGxVGzzhZ_7daMFITk0o-5PcMM/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fa-regular fa-file-excel" aria-hidden="true"></i> Preview Sample Sheet</a>
+                            <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20want%20to%20order%3A%201K%20Manually%20Verified%20Leads%20(%24130)" target="_blank" rel="noopener noreferrer" class="btn btn-wa"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Order via WhatsApp</a>
+                        </div>
+                    </article>
+
+                    <!-- 8 -->
+                    <article class="card" data-category="lead-export">
+                        <span class="chip"><i class="fa-solid fa-database" aria-hidden="true"></i> Sales Nav Scraping</span>
+                        <h3>10K Sales Nav Export (No Email)</h3>
+                        <div class="price"><span class="amount">$20</span><span class="per">one-time</span></div>
+                        <ul class="features">
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>10,000 profiles in clean CSV / Excel</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Name, job title, company and location</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Direct LinkedIn profile URLs</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Fast scraping turnaround</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a href="https://docs.google.com/spreadsheets/d/1XM6CzsW1q_vJhFPYZ4QuUqW1bNEY3zzOSNDcol-c0ko/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fa-regular fa-file-excel" aria-hidden="true"></i> Preview Sample Sheet</a>
+                            <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20want%20to%20order%3A%2010K%20Sales%20Nav%20Export%20Without%20Email%20(%2420)" target="_blank" rel="noopener noreferrer" class="btn btn-wa"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Order via WhatsApp</a>
+                        </div>
+                    </article>
+
+                    <!-- 9 -->
+                    <article class="card" data-category="lead-export">
+                        <span class="chip"><i class="fa-solid fa-envelope-circle-check" aria-hidden="true"></i> Sales Nav + Email</span>
+                        <h3>10K Sales Nav Export (With Email)</h3>
+                        <div class="price"><span class="amount">$40</span><span class="per">one-time</span></div>
+                        <ul class="features">
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>10,000 profiles exported to CSV</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Verified business emails included</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Ready for cold email outreach</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Multi-tool email validation</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20want%20to%20order%3A%2010K%20Sales%20Nav%20Export%20With%20Email%20(%2440)" target="_blank" rel="noopener noreferrer" class="btn btn-wa"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Order via WhatsApp</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why us -->
+        <section class="section alt" id="why-us">
+            <div class="container">
+                <div class="section-head">
+                    <span class="kicker">Why ValidLeads</span>
+                    <h2>Data your sales team can actually use</h2>
+                    <p>Clean, verified and ready to load into your outreach tools.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature reveal">
+                        <div class="ic"><i class="fa-solid fa-envelope-circle-check" aria-hidden="true"></i></div>
+                        <h3>Verified accuracy</h3>
+                        <p>Emails are checked with validation tools such as NeverBounce, ZeroBounce and Clay before delivery.</p>
+                    </div>
+                    <div class="feature reveal">
+                        <div class="ic"><i class="fa-solid fa-gauge-high" aria-hidden="true"></i></div>
+                        <h3>Fast delivery</h3>
+                        <p>Most lead exports are delivered within 24 hours so your campaigns never wait.</p>
+                    </div>
+                    <div class="feature reveal">
+                        <div class="ic"><i class="fa-solid fa-sliders" aria-hidden="true"></i></div>
+                        <h3>Custom targeting</h3>
+                        <p>Tell us the industry, job title, company size and location, and we build the list around your ideal customer.</p>
+                    </div>
+                    <div class="feature reveal">
+                        <div class="ic"><i class="fa-solid fa-lock" aria-hidden="true"></i></div>
+                        <h3>Safe payments</h3>
+                        <p>Pay securely through Wise, PayPal or Payoneer. We never ask for your account passwords.</p>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Card 3 -->
-            <div class="card" data-category="clay-enrich">
-                <div>
-                    <span class="badge-category"><i class="fa-solid fa-wand-magic-sparkles"></i> Clay Enrichment</span>
-                    <h3>Multi-Contact Enrichment Package</h3>
-                    <ul class="features-list">
-                        <li><i class="fa-solid fa-check"></i> 1,000 Verified Work Emails</li>
-                        <li><i class="fa-solid fa-check"></i> Personal Emails (Clay Enriched)</li>
-                        <li><i class="fa-solid fa-check"></i> Direct Mobile Phone Numbers</li>
-                        <li><i class="fa-solid fa-check"></i> Multi-Step Waterfall Data Search</li>
+        <!-- How it works -->
+        <section class="section" id="process">
+            <div class="container">
+                <div class="section-head">
+                    <span class="kicker">How It Works</span>
+                    <h2>From request to delivery in three steps</h2>
+                </div>
+                <div class="steps">
+                    <div class="step reveal"><div class="step-num">1</div><h3>Choose a service</h3><p>Pick a package above, or preview a sample sheet first to check the data quality.</p></div>
+                    <div class="step reveal"><div class="step-num">2</div><h3>Confirm on WhatsApp</h3><p>Send your order and target niche requirements, then receive your payment invoice.</p></div>
+                    <div class="step reveal"><div class="step-num">3</div><h3>Pay and receive</h3><p>Pay via Wise, PayPal or Payoneer and get your data delivered fast.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Payments -->
+        <section class="section tight" id="payment">
+            <div class="container">
+                <div class="pay-wrap reveal">
+                    <span class="kicker">Payments</span>
+                    <h2 style="font-size:30px;font-weight:800;letter-spacing:-0.6px;">Trusted global payment methods</h2>
+                    <p style="color:var(--muted);margin-top:8px;">We issue payment invoices through verified global channels for safe and quick processing.</p>
+                    <ul class="pay-list">
+                        <li><i class="fa-solid fa-globe" aria-hidden="true"></i> Wise</li>
+                        <li><i class="fa-brands fa-paypal" aria-hidden="true"></i> PayPal</li>
+                        <li><i class="fa-solid fa-wallet" aria-hidden="true"></i> Payoneer</li>
                     </ul>
+                    <p class="note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><strong>Note:</strong> Standard processing fees (about $1–$2 or more, depending on the provider) are covered by the buyer.</p>
                 </div>
-                <div class="price-box">
-                    <div class="price-amount">$130 <span class="price-period">/ One-time</span></div>
-                    <div class="btn-group">
-                        <a href="https://docs.google.com/spreadsheets/d/16pKBG6ijxTi6SSOAS_hNIGO_yBXvshiRPcra4xQZyto/edit?gid=0#gid=0" target="_blank" class="btn btn-secondary"><i class="fa-regular fa-file-excel"></i> Preview Sample Sheet</a>
-                        <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20want%20to%20order%3A%20Multi-Contact%20Clay%20Enrichment%20Package%20(%24130)" target="_blank" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Order via WhatsApp</a>
+            </div>
+        </section>
+
+        <!-- Refund policy -->
+        <section class="section alt" id="refund-policy">
+            <div class="container">
+                <div class="section-head">
+                    <span class="kicker">Refund Policy</span>
+                    <h2>Clear terms before you order</h2>
+                    <p>Please read our refund terms so there are no surprises.</p>
+                </div>
+                <div class="policy-grid">
+                    <div class="policy-card no reveal">
+                        <span class="badge no"><i class="fa-solid fa-ban" aria-hidden="true"></i> No refunds</span>
+                        <h3>Apollo lead exports</h3>
+                        <p>Apollo leads are digital data products delivered in full once your order is completed. We do not offer refunds on Apollo leads.</p>
+                        <ul>
+                            <li><i class="fa-solid fa-xmark" aria-hidden="true"></i>10K Apollo Business Emails</li>
+                            <li><i class="fa-solid fa-xmark" aria-hidden="true"></i>1K Apollo Export + Mobiles</li>
+                            <li><i class="fa-solid fa-circle-info" aria-hidden="true" style="color:var(--blue)"></i>Please review the free sample sheet before ordering.</li>
+                        </ul>
+                    </div>
+                    <div class="policy-card yes reveal">
+                        <span class="badge yes"><i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Refund available</span>
+                        <h3>LinkedIn subscriptions</h3>
+                        <p>If a problem occurs with your LinkedIn subscription, we will refund you. Message us on WhatsApp with your order details and we will take care of it.</p>
+                        <ul>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>LinkedIn Sales Navigator Plan</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>LinkedIn Premium Career Plan</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>LinkedIn Premium Business Plan</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="policy-foot">Have a question about an order? <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20have%20a%20question%20about%20my%20order" target="_blank" rel="noopener noreferrer">Message us on WhatsApp</a> and we will help.</p>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section" id="reviews">
+            <div class="container">
+                <div class="section-head">
+                    <span class="kicker">Client Feedback</span>
+                    <h2>What our clients say</h2>
+                    <p>Used by agencies, SDR teams and growth marketers.</p>
+                </div>
+                <div class="quotes">
+                    <figure class="quote reveal">
+                        <div class="stars" aria-label="5 out of 5 stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p>"ValidLeads delivered 10k verified Apollo leads within 12 hours. Zero bounce issues during our cold email campaign!"</p>
+                        <figcaption class="who"><div class="avatar">JS</div><div><strong>Jason Smith</strong><span>Outreach Agency Owner</span></div></figcaption>
+                    </figure>
+                    <figure class="quote reveal">
+                        <div class="stars" aria-label="5 out of 5 stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p>"The Clay enrichment with direct mobile numbers doubled our cold call booking rate. Highly recommended service."</p>
+                        <figcaption class="who"><div class="avatar">MD</div><div><strong>Mark Davis</strong><span>B2B Sales Director</span></div></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section alt" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <span class="kicker">FAQ</span>
+                    <h2>Frequently asked questions</h2>
+                    <p>Everything you need to know before placing an order.</p>
+                </div>
+                <div class="faq">
+                    <details>
+                        <summary>How accurate is the lead data provided? <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></summary>
+                        <div class="answer">Our lead lists are verified using real-time validation tools (NeverBounce, ZeroBounce, Clay). We guarantee a bounce rate under 5% and replace invalid leads free of charge.</div>
+                    </details>
+                    <details>
+                        <summary>Do you offer refunds? <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></summary>
+                        <div class="answer">We do not offer refunds on Apollo leads. LinkedIn subscriptions are refunded if a problem occurs with the subscription. See the full <a href="#refund-policy">refund policy</a>.</div>
+                    </details>
+                    <details>
+                        <summary>How does LinkedIn Sales Navigator activation work? <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></summary>
+                        <div class="answer">We send an official direct activation link to your LinkedIn email address. No password or personal login access is ever required.</div>
+                    </details>
+                    <details>
+                        <summary>Can I request custom targeted niche lead lists? <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></summary>
+                        <div class="answer">Yes. We specialize in custom B2B data scraping, specific decision-maker targeting and custom Clay workflows. Reach out via WhatsApp or LinkedIn with your target requirements.</div>
+                    </details>
+                    <details>
+                        <summary>Which countries do your clients come from? <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></summary>
+                        <div class="answer">Our clients are mostly sales teams and agencies from the USA, UK, Canada, India and Australia. Lists can be customized by industry, job title, company size and location. Share your target and we will confirm availability.</div>
+                    </details>
+                    <details>
+                        <summary>How long does delivery take? <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></summary>
+                        <div class="answer">Most lead exports, including the Apollo packages, are delivered within 24 hours. Larger or custom requests may take longer, and we confirm the timeline with you on WhatsApp before you pay.</div>
+                    </details>
+                    <details>
+                        <summary>Which payment methods do you accept? <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></summary>
+                        <div class="answer">We accept Wise, PayPal and Payoneer. Standard processing fees (about $1–$2 or more, depending on the provider) are covered by the buyer.</div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section" style="padding-bottom:0;">
+            <div class="container">
+                <div class="cta reveal">
+                    <h2>Ready to scale your sales pipeline?</h2>
+                    <p>Need custom lead generation, list enrichment or B2B data solutions? Connect with us directly.</p>
+                    <div class="cta-actions">
+                        <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20have%20a%20question%20about%20your%20services" target="_blank" rel="noopener noreferrer" class="btn btn-wa"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp Direct</a>
+                        <a href="https://www.linkedin.com/in/mdmehedihasanvalidleads/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost-light"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+                        <a href="https://www.facebook.com/mdmehedihasanvalidleads/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost-light"><i class="fa-brands fa-facebook" aria-hidden="true"></i> Facebook</a>
                     </div>
                 </div>
             </div>
+        </section>
+    </main>
 
-            <!-- Card 4 -->
-            <div class="card" data-category="linkedin-plans">
-                <div>
-                    <span class="badge-category"><i class="fa-brands fa-linkedin"></i> LinkedIn Premium</span>
-                    <h3>LinkedIn Sales Navigator Plan</h3>
-                    <ul class="features-list">
-                        <li><i class="fa-solid fa-check"></i> 1 Month Full Access Subscription</li>
-                        <li><i class="fa-solid fa-check"></i> Direct Activation Link to Your Account</li>
-                        <li><i class="fa-solid fa-check"></i> Only Your Email Needed (No Password)</li>
-                        <li><i class="fa-solid fa-check"></i> Unlimited Lead & Account Search Filters</li>
-                    </ul>
-                </div>
-                <div class="price-box">
-                    <div class="price-amount">$37 <span class="price-period">/ Month</span></div>
-                    <div class="btn-group">
-                        <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20want%20to%20order%3A%20LinkedIn%20Sales%20Navigator%20Plan%20(%2437%2Fmonth)" target="_blank" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Order via WhatsApp</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="card" data-category="linkedin-plans">
-                <div>
-                    <span class="badge-category"><i class="fa-brands fa-linkedin"></i> LinkedIn Career</span>
-                    <h3>LinkedIn Premium Career Plan</h3>
-                    <ul class="features-list">
-                        <li><i class="fa-solid fa-check"></i> 5 InMail Credits Per Month</li>
-                        <li><i class="fa-solid fa-check"></i> See Who Viewed Your Profile</li>
-                        <li><i class="fa-solid fa-check"></i> Top Applicant Features & Insights</li>
-                        <li><i class="fa-solid fa-check"></i> Full LinkedIn Learning Access</li>
-                    </ul>
-                </div>
-                <div class="price-box">
-                    <div class="price-amount" style="font-size:24px;">Market Rate <span class="price-period">/ Flexible</span></div>
-                    <div class="btn-group">
-                        <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20want%20to%20inquire%20about%20the%20current%20price%20for%3A%20LinkedIn%20Premium%20Career" target="_blank" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Ask Current Price</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 6 -->
-            <div class="card" data-category="linkedin-plans">
-                <div>
-                    <span class="badge-category"><i class="fa-brands fa-linkedin"></i> LinkedIn Business</span>
-                    <h3>LinkedIn Premium Business Plan</h3>
-                    <ul class="features-list">
-                        <li><i class="fa-solid fa-check"></i> 15 InMail Credits Per Month</li>
-                        <li><i class="fa-solid fa-check"></i> Unlimited Profile Browsing (3rd Degree)</li>
-                        <li><i class="fa-solid fa-check"></i> Detailed Company Growth Insights</li>
-                        <li><i class="fa-solid fa-check"></i> Premium Search & Learning Courses</li>
-                    </ul>
-                </div>
-                <div class="price-box">
-                    <div class="price-amount" style="font-size:24px;">Market Rate <span class="price-period">/ Flexible</span></div>
-                    <div class="btn-group">
-                        <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20want%20to%20inquire%20about%20the%20current%20price%20for%3A%20LinkedIn%20Premium%20Business" target="_blank" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Ask Current Price</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 7 -->
-            <div class="card" data-category="lead-export">
-                <div>
-                    <span class="badge-category"><i class="fa-solid fa-user-check"></i> Manual Research</span>
-                    <h3>100% Manually Verified Leads</h3>
-                    <ul class="features-list">
-                        <li><i class="fa-solid fa-check"></i> 1,000 Targeted B2B Contacts</li>
-                        <li><i class="fa-solid fa-check"></i> Hand-Curated & Double Verified</li>
-                        <li><i class="fa-solid fa-check"></i> Guaranteed 0% Bounce Rate</li>
-                        <li><i class="fa-solid fa-check"></i> Custom Niche Filters</li>
-                    </ul>
-                </div>
-                <div class="price-box">
-                    <div class="price-amount">$130 <span class="price-period">/ One-time</span></div>
-                    <div class="btn-group">
-                        <a href="https://docs.google.com/spreadsheets/d/1pT8A5swuXjhcjFnATPGxVGzzhZ_7daMFITk0o-5PcMM/edit?gid=0#gid=0" target="_blank" class="btn btn-secondary"><i class="fa-regular fa-file-excel"></i> Preview Sample Sheet</a>
-                        <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20want%20to%20order%3A%201K%20Manually%20Verified%20Leads%20(%24130)" target="_blank" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Order via WhatsApp</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 8 -->
-            <div class="card" data-category="lead-export">
-                <div>
-                    <span class="badge-category"><i class="fa-solid fa-database"></i> Sales Nav Scraping</span>
-                    <h3>10K Sales Nav Export (No Email)</h3>
-                    <ul class="features-list">
-                        <li><i class="fa-solid fa-check"></i> 10,000 Profiles to Clean CSV/Excel</li>
-                        <li><i class="fa-solid fa-check"></i> Name, Job Title, Company & Location</li>
-                        <li><i class="fa-solid fa-check"></i> Direct LinkedIn Profile URLs</li>
-                        <li><i class="fa-solid fa-check"></i> Fast Scraping Turnaround</li>
-                    </ul>
-                </div>
-                <div class="price-box">
-                    <div class="price-amount">$20 <span class="price-period">/ One-time</span></div>
-                    <div class="btn-group">
-                        <a href="https://docs.google.com/spreadsheets/d/1XM6CzsW1q_vJhFPYZ4QuUqW1bNEY3zzOSNDcol-c0ko/edit?gid=0#gid=0" target="_blank" class="btn btn-secondary"><i class="fa-regular fa-file-excel"></i> Preview Sample Sheet</a>
-                        <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20want%20to%20order%3A%2010K%20Sales%20Nav%20Export%20Without%20Email%20(%2420)" target="_blank" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Order via WhatsApp</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 9 -->
-            <div class="card" data-category="lead-export">
-                <div>
-                    <span class="badge-category"><i class="fa-solid fa-envelope-circle-check"></i> Sales Nav + Email</span>
-                    <h3>10K Sales Nav Export (With Email)</h3>
-                    <ul class="features-list">
-                        <li><i class="fa-solid fa-check"></i> 10,000 Profiles Exported to CSV</li>
-                        <li><i class="fa-solid fa-check"></i> Verified Business Emails Included</li>
-                        <li><i class="fa-solid fa-check"></i> Ready for Cold Email Outreach</li>
-                        <li><i class="fa-solid fa-check"></i> Multi-Tool Email Validation</li>
-                    </ul>
-                </div>
-                <div class="price-box">
-                    <div class="price-amount">$40 <span class="price-period">/ One-time</span></div>
-                    <div class="btn-group">
-                        <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20want%20to%20order%3A%2010K%20Sales%20Nav%20Export%20With%20Email%20(%2440)" target="_blank" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Order via WhatsApp</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Payment Gateways Section -->
-    <div class="section-box">
-        <div class="section-header">
-            <h2><i class="fa-solid fa-credit-card"></i> Trusted Global Payment Methods</h2>
-            <p>We issue payment invoices via verified global payment channels for safe & instant processing.</p>
-        </div>
-        
-        <div class="payment-methods">
-            <div class="payment-card"><i class="fa-solid fa-globe" style="color:#38bdf8;"></i> Wise (TransferWise)</div>
-            <div class="payment-card"><i class="fa-brands fa-paypal" style="color:#60a5fa;"></i> PayPal</div>
-            <div class="payment-card"><i class="fa-solid fa-wallet" style="color:#f97316;"></i> Payoneer</div>
-        </div>
-
-        <div class="note-box">
-            <i class="fa-solid fa-circle-info"></i> <strong>Note:</strong> Standard processing fees (~$1–$2+ depending on provider) are covered by the buyer. Custom discounts apply for bulk orders!
-        </div>
-    </div>
-
-    <!-- Testimonials / Client Reviews -->
-    <div class="section-box">
-        <div class="section-header">
-            <h2><i class="fa-solid fa-star" style="color:#f59e0b;"></i> What Our Clients Say</h2>
-            <p>Trusted by Agencies, SDRs, and Growth Marketers worldwide.</p>
-        </div>
-
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="rating-stars">
-                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                </div>
-                <p>"ValidLeads delivered 10k verified Apollo leads within 12 hours. Zero bounce issues during our cold email campaign!"</p>
-                <div class="client-info">
-                    <div class="client-avatar">JS</div>
-                    <div class="client-details">
-                        <h4>Jason Smith</h4>
-                        <span>Outreach Agency Owner</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="rating-stars">
-                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                </div>
-                <p>"The Clay enrichment with direct mobile numbers doubled our cold call booking rate. Highly recommended service."</p>
-                <div class="client-info">
-                    <div class="client-avatar">MD</div>
-                    <div class="client-details">
-                        <h4>Mark Davis</h4>
-                        <span>B2B Sales Director</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- FAQ Section -->
-    <div class="section-box">
-        <div class="section-header">
-            <h2><i class="fa-solid fa-circle-question"></i> Frequently Asked Questions</h2>
-            <p>Everything you need to know before placing an order.</p>
-        </div>
-
-        <div class="faq-container">
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    How accurate is the lead data provided? <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    Our lead lists are verified using real-time validation tools (NeverBounce, Zerobounce, Clay). We guarantee a bounce rate under 3-5% and replace invalid leads free of charge.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    How does LinkedIn Sales Navigator activation work? <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    We send an official direct activation link to your LinkedIn email address. No password or personal login access is ever required.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    Can I request custom targeted niche lead lists? <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    Yes! We specialize in custom B2B data scraping, specific decision-maker targeting, and custom Clay workflows. Reach out via WhatsApp or LinkedIn with your target requirements.
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Get in Touch / CTA Section -->
-    <div class="contact-box">
-        <h2>Ready to Scale Your Sales Pipeline?</h2>
-        <p>Looking for custom lead generation, list enrichment, or B2B data solutions? Connect directly with us.</p>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/mdmehedihasanvalidleads/" target="_blank" class="social-btn">
-                <i class="fa-brands fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://www.facebook.com/mdmehedihasanvalidleads/" target="_blank" class="social-btn">
-                <i class="fa-brands fa-facebook"></i> Facebook
-            </a>
-            <a href="https://wa.me/8801728471484" target="_blank" class="social-btn" style="background:#25d366; border-color:#25d366;">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp Direct
-            </a>
-        </div>
-    </div>
-
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20have%20a%20question%20about%20your%20services" class="floating-whatsapp" target="_blank" title="Chat on WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/8801728471484?text=Hi%20ValidLeads%2C%20I%20have%20a%20question%20about%20your%20services" class="floating-wa" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
     </a>
 
     <!-- Footer -->
     <footer>
-        <p>© ValidLeads. All rights reserved. | High-Impact B2B Lead Intelligence Platform</p>
+        <div class="container">
+            <div class="foot-grid">
+                <div>
+                    <a href="#top" class="brand" aria-label="ValidLeads home">
+                        <span class="brand-mark"><i class="fa-solid fa-check" aria-hidden="true"></i></span>
+                        <span>Valid<span class="accent">Leads</span></span>
+                    </a>
+                    <p>Verified B2B lead generation and data enrichment for sales teams and agencies in the USA, UK, Canada, India and Australia.</p>
+                    <div class="foot-social">
+                        <a href="https://www.linkedin.com/in/mdmehedihasanvalidleads/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                        <a href="https://www.facebook.com/mdmehedihasanvalidleads/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="https://wa.me/8801728471484" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#services">Services &amp; Pricing</a></li>
+                        <li><a href="#why-us">Why ValidLeads</a></li>
+                        <li><a href="#process">How It Works</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Policies</h4>
+                    <ul>
+                        <li><a href="#refund-policy">Refund Policy</a></li>
+                        <li><a href="#payment">Payment Methods</a></li>
+                        <li><a href="https://wa.me/8801728471484" target="_blank" rel="noopener noreferrer">Contact Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="legal">
+                <p>© <span id="year">2026</span> ValidLeads. All rights reserved.</p>
+                <p>Clients are responsible for using purchased data in line with the laws that apply to their outreach, such as CAN-SPAM, GDPR/PECR and CASL.</p>
+            </div>
+        </div>
     </footer>
 
-    <!-- Interactive Scripts -->
     <script>
-        // Category Filter Function
-        function filterCategory(category, event) {
-            const cards = document.querySelectorAll('.card');
-            const buttons = document.querySelectorAll('.tab-btn');
-
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-
-            cards.forEach(card => {
-                if (category === 'all' || card.getAttribute('data-category') === category) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
+        // Category filter
+        (function () {
+            var buttons = document.querySelectorAll('.tab-btn');
+            var cards = document.querySelectorAll('#services-grid .card');
+            buttons.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    var cat = btn.getAttribute('data-filter');
+                    buttons.forEach(function (b) {
+                        b.classList.remove('active');
+                        b.setAttribute('aria-pressed', 'false');
+                    });
+                    btn.classList.add('active');
+                    btn.setAttribute('aria-pressed', 'true');
+                    cards.forEach(function (card) {
+                        var show = cat === 'all' || card.getAttribute('data-category') === cat;
+                        card.style.display = show ? 'flex' : 'none';
+                    });
+                });
             });
-        }
+        })();
 
-        // FAQ Toggle Function
-        function toggleFaq(element) {
-            const item = element.parentElement;
-            item.classList.toggle('active');
-        }
+        // Mobile menu
+        (function () {
+            var toggle = document.getElementById('menu-toggle');
+            var links = document.getElementById('nav-links');
+            if (!toggle || !links) return;
+            function setOpen(open) {
+                links.classList.toggle('open', open);
+                toggle.setAttribute('aria-expanded', String(open));
+                toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+                toggle.firstElementChild.className = open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+            }
+            toggle.addEventListener('click', function () {
+                setOpen(!links.classList.contains('open'));
+            });
+            links.addEventListener('click', function (e) {
+                if (e.target.tagName === 'A') setOpen(false);
+            });
+        })();
+
+        // Footer year
+        var yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+        // Scroll reveal for cards
+        (function () {
+            var targets = document.querySelectorAll('.card');
+            targets.forEach(function (el) { el.classList.add('reveal'); });
+            var all = document.querySelectorAll('.reveal');
+            if (!('IntersectionObserver' in window)) {
+                all.forEach(function (el) { el.classList.add('in'); });
+                return;
+            }
+            var io = new IntersectionObserver(function (entries, obs) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08 });
+            all.forEach(function (el) { io.observe(el); });
+        })();
     </script>
 </body>
 </html>
