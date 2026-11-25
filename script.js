@@ -90,6 +90,31 @@
             return a;
         };
 
+
+        // Send the same order as a pre-filled WhatsApp message
+        var waBtn = document.getElementById('wa-submit');
+        if (waBtn) {
+            waBtn.addEventListener('click', function () {
+                var hasUrl = !apolloFields.hidden && urlField.value.trim();
+                notes.setCustomValidity(!hasUrl && !notes.value.trim() ? 'Please add a few details or your Apollo search URL.' : '');
+                if (!notes.checkValidity()) { notes.reportValidity(); return; }
+                var v = function (id) { var el = document.getElementById(id); return el ? el.value.trim() : ''; };
+                var lines = ['Hello, I would like to place an order.', '', 'Service: ' + service.value];
+                if (!apolloFields.hidden) {
+                    if (v('search-url')) lines.push('Apollo search URL: ' + v('search-url'));
+                    lines.push('Number of leads: ' + v('leads'));
+                    if (document.getElementById('mobiles').checked) lines.push('Mobile numbers: Yes');
+                }
+                if (v('notes')) lines.push('Details: ' + v('notes'));
+                if (v('name')) lines.push('Name: ' + v('name'));
+                if (v('email')) lines.push('Email: ' + v('email'));
+                var url = 'https://wa.me/8801728471484?text=' + encodeURIComponent(lines.join('\n'));
+                var w = window.open(url, '_blank', 'noopener');
+                if (!w) { window.location.href = url; }
+                showStatus('ok', ['WhatsApp is opening with your message ready. Please press Send there to complete your order.']);
+            });
+        }
+
         form.addEventListener('submit', function (e) {
             e.preventDefault();
             var hasUrl = !apolloFields.hidden && urlField.value.trim();
