@@ -662,3 +662,62 @@ footer .brand-mark{border:none;box-shadow:none}
 .doc a{font-weight:600}
 @media (max-width:860px){.nav-links{border-bottom:1px solid var(--line)}}
 @media (max-width:600px){.sticker.s1{left:-6px}.sticker.s2{right:-4px}}
+
+/* ==========================================================
+   Smooth premium card interactions
+   ========================================================== */
+@keyframes rise{from{opacity:0;transform:translateY(22px) scale(.985)}to{opacity:1;transform:none}}
+.js .reveal.in{animation:rise .8s cubic-bezier(.22,1,.36,1) backwards}
+
+.card{
+  position:relative;overflow:hidden;will-change:transform;
+  transition:transform .55s cubic-bezier(.22,1,.36,1),box-shadow .55s cubic-bezier(.22,1,.36,1),border-color .4s ease,background .4s ease;
+}
+.card.special{overflow:hidden}
+/* soft light sweep */
+.card:not(.special)::after{
+  content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;
+  background:radial-gradient(420px circle at 50% -10%,color-mix(in srgb,var(--c) 16%,transparent),transparent 60%);
+  transition:opacity .6s ease;
+}
+.card.special::after{
+  display:block;content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;
+  background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.28) 50%,transparent 65%);
+  background-size:250% 100%;background-position:150% 0;
+  transition:opacity .4s ease,background-position 1s cubic-bezier(.22,1,.36,1);
+}
+.card:hover{
+  transform:translateY(-8px) scale(1.012);
+  box-shadow:0 2px 6px rgba(26,16,51,.05),0 40px 70px -30px color-mix(in srgb,var(--c) 55%,rgba(26,16,51,.4));
+  border-color:color-mix(in srgb,var(--c) 40%,#fff);
+}
+.card:hover::after{opacity:1}
+.card.special:hover::after{background-position:-50% 0}
+.card.special:hover{box-shadow:0 44px 80px -30px rgba(124,92,255,.85)}
+
+/* inner motion */
+.tag i{transition:transform .5s cubic-bezier(.34,1.56,.64,1),background .3s,color .3s}
+.card:hover .tag i{transform:translateY(-2px) rotate(-8deg) scale(1.12);background:var(--c);color:#fff}
+.card.special:hover .tag i{background:#fff;color:#7c3aed}
+.price .amount{display:inline-block;transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.card:hover .price .amount{transform:translateX(3px)}
+.features li{transition:transform .45s cubic-bezier(.22,1,.36,1)}
+.card:hover .features li{transform:translateX(3px)}
+.card:hover .features li:nth-child(2){transition-delay:.04s}
+.card:hover .features li:nth-child(3){transition-delay:.08s}
+.sample{transition:letter-spacing .3s ease,opacity .3s}
+.card:hover .sample{letter-spacing:.01em}
+.btn{transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s ease,background .3s,border-color .3s,color .3s}
+.card:hover .btn-outline{border-color:var(--c);color:var(--c)}
+.card.special:hover .btn-outline{color:#4c2fd1;border-color:#fff}
+.card:active{transform:translateY(-3px) scale(.995);transition-duration:.15s}
+
+/* touch devices: gentle press feedback instead of hover */
+@media (hover:none){
+  .card:hover{transform:none;box-shadow:var(--shadow)}
+  .card:active{transform:scale(.985)}
+}
+@media (prefers-reduced-motion:reduce){
+  .card,.card *,.js .reveal.in{transition:none!important;animation:none!important}
+  .card:hover{transform:none}
+}
