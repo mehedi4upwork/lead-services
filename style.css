@@ -752,3 +752,34 @@ i.ic svg{width:1em;height:1em;fill:currentColor;display:block;flex:none}
 .card:not(.special) .sample{color:color-mix(in srgb,var(--c) 62%,#1a1033)}
 .hero::before{-webkit-mask-image:linear-gradient(to bottom,#000 60%,transparent 100%);mask-image:linear-gradient(to bottom,#000 60%,transparent 100%)}
 .hero{padding-bottom:72px}
+
+/* ==== Final polish: snappier motion + readable small text ==== */
+.js .reveal.in{animation:rise .45s cubic-bezier(.2,.8,.2,1) backwards}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.card{will-change:auto;transition:transform .28s cubic-bezier(.2,.8,.2,1),box-shadow .28s cubic-bezier(.2,.8,.2,1),border-color .2s ease,background .2s ease}
+.card:hover{transform:translateY(-6px) scale(1.01)}
+.card:not(.special)::after{transition:opacity .3s ease}
+.card.special::after{transition:opacity .25s ease,background-position .6s cubic-bezier(.2,.8,.2,1)}
+.tag i{transition:transform .3s cubic-bezier(.34,1.56,.64,1),background .2s,color .2s}
+.price .amount,.features li{transition:transform .28s cubic-bezier(.2,.8,.2,1)}
+.card:hover .features li:nth-child(2){transition-delay:.02s}
+.card:hover .features li:nth-child(3){transition-delay:.04s}
+.btn{transition:transform .2s cubic-bezier(.2,.8,.2,1),box-shadow .2s ease,background .2s,border-color .2s,color .2s}
+.contact-card{transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s ease,border-color .2s}
+.faq details{transition:box-shadow .25s ease,border-color .2s}
+html{scroll-behavior:smooth}
+
+.tag{font-size:12px}
+.eyebrow{font-size:12px}
+.pop{font-size:12px}
+.note,.note .no{font-size:13px}
+.fine{font-size:13.5px}
+.sticker{font-size:13px}
+@media (prefers-reduced-motion:reduce){.card,.btn,.contact-card,.faq details{transition:none!important}}
+.card-head{gap:8px}
+.tag{letter-spacing:.02em;gap:8px}
+.tag i{width:34px;height:34px}
+.pop{padding:3px 9px;letter-spacing:.03em}
+@media (min-width:861px) and (max-width:1180px){.grid.g3 .tag{font-size:11.5px}}
+@media (max-width:400px){.card-head{flex-wrap:wrap}}
+@media (min-width:861px) and (max-width:1180px){.grid.g3 .card-head{flex-wrap:wrap;row-gap:8px}}
