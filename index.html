@@ -24,8 +24,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Sora:wght@500;600;700&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="style.css?v=5">
 
     <!-- Structured data -->
     <script type="application/ld+json">
@@ -91,7 +92,7 @@
                 </div>
 
                 <div class="portrait-card">
-                    <img src="assets/profile.jpg" width="400" height="400" alt="Md Mehedi Hasan, founder of ValidLeads">
+                    <img src="assets/profile.jpg" width="400" height="400" alt="Md Mehedi Hasan, founder of ValidLeads" fetchpriority="high" decoding="async">
                     <div class="portrait-meta">
                         <div><strong>Md Mehedi Hasan</strong><span>B2B Lead Generation Specialist</span></div>
                         <i class="fa-solid fa-circle-check verified" aria-hidden="true"></i>
@@ -725,6 +726,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=5" defer></script>
 </body>
 </html>
