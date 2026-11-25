@@ -749,3 +749,4 @@ i.ic svg{width:1em;height:1em;fill:currentColor;display:block;flex:none}
 .btn-primary{background:linear-gradient(135deg,#6a46f0,#8b2fe0 60%,#c2357a)}
 .card.special{background:linear-gradient(135deg,#4f33e0 0%,#8b2fe0 55%,#c2357a 100%)}
 .section.alt{background:linear-gradient(135deg,#4a2fd6 0%,#5b3df0 50%,#8b2fe0 100%)}
+.card:not(.special) .sample{color:color-mix(in srgb,var(--c) 62%,#1a1033)}
