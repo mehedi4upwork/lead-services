@@ -364,3 +364,6 @@ footer ul a:hover { color: var(--accent-2); }
 .order-notes { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
 .order-notes .block + .block { margin-top: 0; }
 @media (max-width: 860px) { .contact-cards, .order-notes { grid-template-columns: 1fr; gap: 28px; } }
+
+.card.special { border-color: rgba(34, 211, 238, 0.45); background: linear-gradient(180deg, #10202b, #0e1722); }
+.card.special .pop { background: linear-gradient(135deg, #f5c451, #f59e0b); }
